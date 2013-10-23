@@ -1,0 +1,824 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+<style type="text/css">
+.style1 {
+	text-align: center;
+	color: #800000;
+}
+</style>
+</head>
+
+<body style="background-image: url('light-wood-texture.jpg')">
+
+<h2 class="style1">BankApplet.java</h2>
+<p>&nbsp;</p>
+<font COLOR="#7f0055" SIZE="2"><b>
+<p ALIGN="LEFT">import</b></font><font SIZE="2"> javax.swing.*;</p>
+<p ALIGN="LEFT"></p>
+</font><font COLOR="#7f0055" SIZE="2"><b>
+<p ALIGN="LEFT">import</b></font><font SIZE="2"> java.awt.Container;</p>
+</font><font COLOR="#7f0055" SIZE="2"><b>
+<p ALIGN="LEFT">import</b></font><font SIZE="2"> java.awt.event.ActionEvent;</p>
+</font><font COLOR="#7f0055" SIZE="2"><b>
+<p ALIGN="LEFT">import</b></font><font SIZE="2"> java.awt.event.ActionListener;</p>
+</font><font COLOR="#7f0055" SIZE="2"><b>
+<p ALIGN="LEFT">import</b></font><font SIZE="2"> java.io.BufferedReader;</p>
+</font><font COLOR="#7f0055" SIZE="2"><b>
+<p ALIGN="LEFT">import</b></font><font SIZE="2"> java.io.IOException;</p>
+</font><font COLOR="#7f0055" SIZE="2"><b>
+<p ALIGN="LEFT">import</b></font><font SIZE="2"> java.io.InputStreamReader;</p>
+</font><font COLOR="#7f0055" SIZE="2"><b>
+<p ALIGN="LEFT">import</b></font><font SIZE="2"> java.io.ObjectOutputStream;</p>
+</font><font COLOR="#7f0055" SIZE="2"><b>
+<p ALIGN="LEFT">import</b></font><font SIZE="2"> java.io.OutputStream;</p>
+</font><font COLOR="#7f0055" SIZE="2"><b>
+<p ALIGN="LEFT">import</b></font><font SIZE="2"> java.net.MalformedURLException;</p>
+</font><font COLOR="#7f0055" SIZE="2"><b>
+<p ALIGN="LEFT">import</b></font><font SIZE="2"> java.net.URL;</p>
+</font><font COLOR="#7f0055" SIZE="2"><b>
+<p ALIGN="LEFT">import</b></font><font SIZE="2"> java.net.URLConnection;</p>
+</font><font COLOR="#7f0055" SIZE="2"><b>
+<p ALIGN="LEFT">import</b></font><font SIZE="2"> java.sql.Connection;</p>
+</font><font COLOR="#7f0055" SIZE="2"><b>
+<p ALIGN="LEFT">import</b></font><font SIZE="2"> java.sql.DriverManager;</p>
+</font><font COLOR="#7f0055" SIZE="2"><b>
+<p ALIGN="LEFT">import</b></font><font SIZE="2"> java.sql.ResultSet;</p>
+</font><font COLOR="#7f0055" SIZE="2"><b>
+<p ALIGN="LEFT">import</b></font><font SIZE="2"> java.sql.SQLException;</p>
+</font><font COLOR="#7f0055" SIZE="2"><b>
+<p ALIGN="LEFT">import</b></font><font SIZE="2"> java.sql.Statement;</p>
+<p ALIGN="LEFT"></p>
+</font><font COLOR="#3f7f5f" SIZE="2">
+<p ALIGN="LEFT">/*</p>
+<p ALIGN="LEFT">* To change this template, choose Tools | Templates</p>
+<p ALIGN="LEFT">* and open the template in the editor.</p>
+<p ALIGN="LEFT">*/</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT"></p>
+</font><font COLOR="#3f5fbf" SIZE="2">
+<p ALIGN="LEFT">/**</p>
+<p ALIGN="LEFT">* </p>
+<p ALIGN="LEFT">* </font><font COLOR="#7f9fbf" SIZE="2"><b>@author</b></font><font COLOR="#3f5fbf" SIZE="2"> 
+js595</p>
+<p ALIGN="LEFT">*/</p>
+</font><font COLOR="#646464" SIZE="2">
+<p ALIGN="LEFT">@SuppressWarnings</font><font SIZE="2">(</font><font COLOR="#2a00ff" SIZE="2">&quot;serial&quot;</font><font SIZE="2">)</p>
+</font><font COLOR="#7f0055" SIZE="2"><b>
+<p ALIGN="LEFT">public</b></font><font SIZE="2"> </font>
+<font COLOR="#7f0055" SIZE="2"><b>class</b></font><font SIZE="2"> <u>BankApplet</u>
+</font><font COLOR="#7f0055" SIZE="2"><b>extends</b></font><font SIZE="2"> 
+JApplet {</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#3f5fbf" SIZE="2">/**</p>
+<p ALIGN="LEFT">* Creates new form AtmApplet1</p>
+<p ALIGN="LEFT">* </p>
+<p ALIGN="LEFT">* </font><font COLOR="#7f9fbf" SIZE="2"><b>@return</p>
+</b></font><font COLOR="#3f5fbf" SIZE="2">
+<p ALIGN="LEFT">*/</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>public</b></font><font SIZE="2">
+</font><font COLOR="#7f0055" SIZE="2"><b>void</b></font><font SIZE="2"> 
+callApplet(Container rootPane) {</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>this</b></font><font SIZE="2">.</font><font COLOR="#0000c0" SIZE="2">rootPane</font><font SIZE="2"> 
+= rootPane;</p>
+<p ALIGN="LEFT">initComponents();</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>try</b></font><font SIZE="2"> 
+{</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>for</b></font><font SIZE="2"> 
+(UIManager.LookAndFeelInfo info : UIManager</p>
+<p ALIGN="LEFT">.<i>getInstalledLookAndFeels</i>()) {</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>if</b></font><font SIZE="2"> 
+(</font><font COLOR="#2a00ff" SIZE="2">&quot;Nimbus&quot;</font><font SIZE="2">.equals(info.getName())) 
+{</p>
+<p ALIGN="LEFT">UIManager.<i>setLookAndFeel</i>(info.getClassName());</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>break</b></font><font SIZE="2">;</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT">} </font><font COLOR="#7f0055" SIZE="2"><b>catch</b></font><font SIZE="2"> 
+(ClassNotFoundException ex) {</p>
+<p ALIGN="LEFT">java.util.logging.Logger.<i>getLogger</i>(BankApplet.</font><font COLOR="#7f0055" SIZE="2"><b>class</b></font><font SIZE="2">.getName()).log(</p>
+<p ALIGN="LEFT">java.util.logging.Level.</font><font COLOR="#0000c0" SIZE="2"><i>SEVERE</i></font><font SIZE="2">,
+</font><font COLOR="#7f0055" SIZE="2"><b>null</b></font><font SIZE="2">, ex);</p>
+<p ALIGN="LEFT">} </font><font COLOR="#7f0055" SIZE="2"><b>catch</b></font><font SIZE="2"> 
+(InstantiationException ex) {</p>
+<p ALIGN="LEFT">java.util.logging.Logger.<i>getLogger</i>(BankApplet.</font><font COLOR="#7f0055" SIZE="2"><b>class</b></font><font SIZE="2">.getName()).log(</p>
+<p ALIGN="LEFT">java.util.logging.Level.</font><font COLOR="#0000c0" SIZE="2"><i>SEVERE</i></font><font SIZE="2">,
+</font><font COLOR="#7f0055" SIZE="2"><b>null</b></font><font SIZE="2">, ex);</p>
+<p ALIGN="LEFT">} </font><font COLOR="#7f0055" SIZE="2"><b>catch</b></font><font SIZE="2"> 
+(IllegalAccessException ex) {</p>
+<p ALIGN="LEFT">java.util.logging.Logger.<i>getLogger</i>(BankApplet.</font><font COLOR="#7f0055" SIZE="2"><b>class</b></font><font SIZE="2">.getName()).log(</p>
+<p ALIGN="LEFT">java.util.logging.Level.</font><font COLOR="#0000c0" SIZE="2"><i>SEVERE</i></font><font SIZE="2">,
+</font><font COLOR="#7f0055" SIZE="2"><b>null</b></font><font SIZE="2">, ex);</p>
+<p ALIGN="LEFT">} </font><font COLOR="#7f0055" SIZE="2"><b>catch</b></font><font SIZE="2"> 
+(UnsupportedLookAndFeelException ex) {</p>
+<p ALIGN="LEFT">java.util.logging.Logger.<i>getLogger</i>(BankApplet.</font><font COLOR="#7f0055" SIZE="2"><b>class</b></font><font SIZE="2">.getName()).log(</p>
+<p ALIGN="LEFT">java.util.logging.Level.</font><font COLOR="#0000c0" SIZE="2"><i>SEVERE</i></font><font SIZE="2">,
+</font><font COLOR="#7f0055" SIZE="2"><b>null</b></font><font SIZE="2">, ex);</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></font><font COLOR="#3f7f5f" SIZE="2">// &lt;/editor-fold&gt;</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT">initComponents();</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>public</b></font><font SIZE="2">
+</font><font COLOR="#7f0055" SIZE="2"><b>void</b></font><font SIZE="2"> init() {</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>try</b></font><font SIZE="2"> 
+{</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>for</b></font><font SIZE="2"> 
+(UIManager.LookAndFeelInfo info : UIManager</p>
+<p ALIGN="LEFT">.<i>getInstalledLookAndFeels</i>()) {</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>if</b></font><font SIZE="2"> 
+(</font><font COLOR="#2a00ff" SIZE="2">&quot;Nimbus&quot;</font><font SIZE="2">.equals(info.getName())) 
+{</p>
+<p ALIGN="LEFT">UIManager.<i>setLookAndFeel</i>(info.getClassName());</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>break</b></font><font SIZE="2">;</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT">} </font><font COLOR="#7f0055" SIZE="2"><b>catch</b></font><font SIZE="2"> 
+(ClassNotFoundException ex) {</p>
+<p ALIGN="LEFT">java.util.logging.Logger.<i>getLogger</i>(BankApplet.</font><font COLOR="#7f0055" SIZE="2"><b>class</b></font><font SIZE="2">.getName()).log(</p>
+<p ALIGN="LEFT">java.util.logging.Level.</font><font COLOR="#0000c0" SIZE="2"><i>SEVERE</i></font><font SIZE="2">,
+</font><font COLOR="#7f0055" SIZE="2"><b>null</b></font><font SIZE="2">, ex);</p>
+<p ALIGN="LEFT">} </font><font COLOR="#7f0055" SIZE="2"><b>catch</b></font><font SIZE="2"> 
+(InstantiationException ex) {</p>
+<p ALIGN="LEFT">java.util.logging.Logger.<i>getLogger</i>(BankApplet.</font><font COLOR="#7f0055" SIZE="2"><b>class</b></font><font SIZE="2">.getName()).log(</p>
+<p ALIGN="LEFT">java.util.logging.Level.</font><font COLOR="#0000c0" SIZE="2"><i>SEVERE</i></font><font SIZE="2">,
+</font><font COLOR="#7f0055" SIZE="2"><b>null</b></font><font SIZE="2">, ex);</p>
+<p ALIGN="LEFT">} </font><font COLOR="#7f0055" SIZE="2"><b>catch</b></font><font SIZE="2"> 
+(IllegalAccessException ex) {</p>
+<p ALIGN="LEFT">java.util.logging.Logger.<i>getLogger</i>(BankApplet.</font><font COLOR="#7f0055" SIZE="2"><b>class</b></font><font SIZE="2">.getName()).log(</p>
+<p ALIGN="LEFT">java.util.logging.Level.</font><font COLOR="#0000c0" SIZE="2"><i>SEVERE</i></font><font SIZE="2">,
+</font><font COLOR="#7f0055" SIZE="2"><b>null</b></font><font SIZE="2">, ex);</p>
+<p ALIGN="LEFT">} </font><font COLOR="#7f0055" SIZE="2"><b>catch</b></font><font SIZE="2"> 
+(UnsupportedLookAndFeelException ex) {</p>
+<p ALIGN="LEFT">java.util.logging.Logger.<i>getLogger</i>(BankApplet.</font><font COLOR="#7f0055" SIZE="2"><b>class</b></font><font SIZE="2">.getName()).log(</p>
+<p ALIGN="LEFT">java.util.logging.Level.</font><font COLOR="#0000c0" SIZE="2"><i>SEVERE</i></font><font SIZE="2">,
+</font><font COLOR="#7f0055" SIZE="2"><b>null</b></font><font SIZE="2">, ex);</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></font><font COLOR="#3f7f5f" SIZE="2">// &lt;/editor-fold&gt;</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT">initComponents();</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#3f5fbf" SIZE="2">/**</p>
+<p ALIGN="LEFT">* This method is called from within the constructor to 
+initialize the form.</p>
+<p ALIGN="LEFT">* WARNING: Do NOT modify this code. The content of this method 
+is always</p>
+<p ALIGN="LEFT">* regenerated by the Form Editor.</p>
+<p ALIGN="LEFT">*/</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>private</b></font><font SIZE="2">
+</font><font COLOR="#7f0055" SIZE="2"><b>void</b></font><font SIZE="2"> 
+initComponents() {</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">Jframe1</font><font SIZE="2"> 
+= </font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+JFrame();</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT">initLoginPanel();</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">Jframe1</font><font SIZE="2">.add(</font><font COLOR="#0000c0" SIZE="2">jPanel1</font><font SIZE="2">);</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">Jframe1</font><font SIZE="2">.pack();</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>private</b></font><font SIZE="2">
+</font><font COLOR="#7f0055" SIZE="2"><b>void</b></font><font SIZE="2"> 
+initLoginPanel() {</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+JFileChooser();</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jPanel1</font><font SIZE="2"> 
+= </font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+JPanel();</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jComboBox1</font><font SIZE="2"> 
+= </font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+JComboBox();</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jLabel2</font><font SIZE="2"> 
+= </font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+JLabel();</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jLabel3</font><font SIZE="2"> 
+= </font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+JLabel();</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jTextField1</font><font SIZE="2"> 
+= </font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+JTextField();</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jPasswordField1</font><font SIZE="2"> 
+= </font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+JPasswordField();</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jButton1</font><font SIZE="2"> 
+= </font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+JButton();</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jLabel1</font><font SIZE="2"> 
+= </font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+JLabel();</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jButton2</font><font SIZE="2"> 
+= </font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+JButton();</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jTextArea1</font><font SIZE="2"> 
+= </font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+JTextArea();</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">Jframe1</font><font SIZE="2">.setDefaultCloseOperation(WindowConstants.</font><font COLOR="#0000c0" SIZE="2"><i>EXIT_ON_CLOSE</i></font><font SIZE="2">);</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jPanel1</font><font SIZE="2">.setBackground(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+java.awt.Color(255, 204, 102));</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jPanel1</font><font SIZE="2">.setBorder(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+javax.swing.border.LineBorder(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+java.awt.Color(</p>
+<p ALIGN="LEFT">0, 0, 0), 1, </font><font COLOR="#7f0055" SIZE="2"><b>true</b></font><font SIZE="2">));</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jComboBox1</font><font SIZE="2">.setModel(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+DefaultComboBoxModel(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+String[] { </font><font COLOR="#2a00ff" SIZE="2">&quot;Customer&quot;</font><font SIZE="2">,</p>
+<p ALIGN="LEFT"></font><font COLOR="#2a00ff" SIZE="2">&quot;Representative&quot;</font><font SIZE="2"> 
+}));</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jComboBox1</font><font SIZE="2">.addActionListener(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+ActionListener() {</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>public</b></font><font SIZE="2">
+</font><font COLOR="#7f0055" SIZE="2"><b>void</b></font><font SIZE="2"> 
+actionPerformed(ActionEvent evt) {</p>
+<p ALIGN="LEFT">jComboBox1ActionPerformed(evt);</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT">});</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jLabel2</font><font SIZE="2">.setFont(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+java.awt.Font(</font><font COLOR="#2a00ff" SIZE="2">&quot;Tahoma&quot;</font><font SIZE="2">, 
+0, 13)); </font><font COLOR="#3f7f5f" SIZE="2">// NOI18N</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jLabel2</font><font SIZE="2">.setForeground(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+java.awt.Color(51, 102, 255));</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jLabel2</font><font SIZE="2">.setText(</font><font COLOR="#2a00ff" SIZE="2">&quot;User 
+Name&quot;</font><font SIZE="2">);</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jLabel3</font><font SIZE="2">.setFont(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+java.awt.Font(</font><font COLOR="#2a00ff" SIZE="2">&quot;Tahoma&quot;</font><font SIZE="2">, 
+0, 13)); </font><font COLOR="#3f7f5f" SIZE="2">// NOI18N</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jLabel3</font><font SIZE="2">.setForeground(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+java.awt.Color(51, 102, 255));</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jLabel3</font><font SIZE="2">.setText(</font><font COLOR="#2a00ff" SIZE="2">&quot;Password&quot;</font><font SIZE="2">);</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jTextField1</font><font SIZE="2">.addActionListener(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+ActionListener() {</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>public</b></font><font SIZE="2">
+</font><font COLOR="#7f0055" SIZE="2"><b>void</b></font><font SIZE="2"> 
+actionPerformed(ActionEvent evt) {</p>
+<p ALIGN="LEFT">jTextField1ActionPerformed(evt);</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT">});</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jButton1</font><font SIZE="2">.setBackground(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+java.awt.Color(204, 204, 204));</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jButton1</font><font SIZE="2">.setFont(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+java.awt.Font(</font><font COLOR="#2a00ff" SIZE="2">&quot;Tahoma&quot;</font><font SIZE="2">, 
+1, 11)); </font><font COLOR="#3f7f5f" SIZE="2">// NOI18N</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jButton1</font><font SIZE="2">.setForeground(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+java.awt.Color(51, 102, 255));</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jButton1</font><font SIZE="2">.setText(</font><font COLOR="#2a00ff" SIZE="2">&quot;Sign 
+In&quot;</font><font SIZE="2">);</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jButton1</font><font SIZE="2">.setBorder(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+javax.swing.border.SoftBevelBorder(</p>
+<p ALIGN="LEFT">javax.swing.border.BevelBorder.</font><font COLOR="#0000c0" SIZE="2"><i>RAISED</i></font><font SIZE="2">));</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jButton1</font><font SIZE="2">.addActionListener(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+ActionListener() {</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>public</b></font><font SIZE="2">
+</font><font COLOR="#7f0055" SIZE="2"><b>void</b></font><font SIZE="2"> 
+actionPerformed(ActionEvent evt) {</p>
+<p ALIGN="LEFT">jButton1ActionPerformed(evt);</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT">});</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jLabel1</font><font SIZE="2">.setFont(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+java.awt.Font(</font><font COLOR="#2a00ff" SIZE="2">&quot;Tahoma&quot;</font><font SIZE="2">, 
+0, 13)); </font><font COLOR="#3f7f5f" SIZE="2">// NOI18N</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jLabel1</font><font SIZE="2">.setForeground(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+java.awt.Color(51, 102, 255));</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jLabel1</font><font SIZE="2">.setText(</font><font COLOR="#2a00ff" SIZE="2">&quot;Sign 
+in&quot;</font><font SIZE="2">);</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jButton2</font><font SIZE="2">.setBackground(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+java.awt.Color(204, 204, 204));</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jButton2</font><font SIZE="2">.setFont(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+java.awt.Font(</font><font COLOR="#2a00ff" SIZE="2">&quot;Tahoma&quot;</font><font SIZE="2">, 
+1, 11)); </font><font COLOR="#3f7f5f" SIZE="2">// NOI18N</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jButton2</font><font SIZE="2">.setForeground(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+java.awt.Color(51, 102, 255));</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jButton2</font><font SIZE="2">.setText(</font><font COLOR="#2a00ff" SIZE="2">&quot;Sign 
+Up&quot;</font><font SIZE="2">);</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jButton2</font><font SIZE="2">.setBorder(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+javax.swing.border.SoftBevelBorder(</p>
+<p ALIGN="LEFT">javax.swing.border.BevelBorder.</font><font COLOR="#0000c0" SIZE="2"><i>RAISED</i></font><font SIZE="2">));</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jButton2</font><font SIZE="2">.addActionListener(</font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+ActionListener() {</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>public</b></font><font SIZE="2">
+</font><font COLOR="#7f0055" SIZE="2"><b>void</b></font><font SIZE="2"> 
+actionPerformed(ActionEvent evt) {</p>
+<p ALIGN="LEFT">jButton2ActionPerformed(evt);</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT">});</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jTextArea1</font><font SIZE="2">.setColumns(10);</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jTextArea1</font><font SIZE="2">.setRows(5);</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT">GroupLayout jPanel1Layout = </font>
+<font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> GroupLayout(</font><font COLOR="#0000c0" SIZE="2">jPanel1</font><font SIZE="2">);</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jPanel1</font><font SIZE="2">.setLayout(jPanel1Layout);</p>
+<p ALIGN="LEFT">jPanel1Layout</p>
+<p ALIGN="LEFT">.setHorizontalGroup(jPanel1Layout</p>
+<p ALIGN="LEFT">.createParallelGroup(GroupLayout.Alignment.</font><font COLOR="#0000c0" SIZE="2"><i>LEADING</i></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addGroup(</p>
+<p ALIGN="LEFT">jPanel1Layout</p>
+<p ALIGN="LEFT">.createSequentialGroup()</p>
+<p ALIGN="LEFT">.addGroup(</p>
+<p ALIGN="LEFT">jPanel1Layout</p>
+<p ALIGN="LEFT">.createParallelGroup(</p>
+<p ALIGN="LEFT">GroupLayout.Alignment.</font><font COLOR="#0000c0" SIZE="2"><i>LEADING</i></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addGroup(</p>
+<p ALIGN="LEFT">jPanel1Layout</p>
+<p ALIGN="LEFT">.createSequentialGroup()</p>
+<p ALIGN="LEFT">.addGap(54,</p>
+<p ALIGN="LEFT">54,</p>
+<p ALIGN="LEFT">54)</p>
+<p ALIGN="LEFT">.addComponent(</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jLabel1</font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>PREFERRED_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">81,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>PREFERRED_SIZE</i></font><font SIZE="2">))</p>
+<p ALIGN="LEFT">.addGroup(</p>
+<p ALIGN="LEFT">GroupLayout.Alignment.</font><font COLOR="#0000c0" SIZE="2"><i>TRAILING</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">jPanel1Layout</p>
+<p ALIGN="LEFT">.createSequentialGroup()</p>
+<p ALIGN="LEFT">.addContainerGap()</p>
+<p ALIGN="LEFT">.addGroup(</p>
+<p ALIGN="LEFT">jPanel1Layout</p>
+<p ALIGN="LEFT">.createParallelGroup(</p>
+<p ALIGN="LEFT">GroupLayout.Alignment.</font><font COLOR="#0000c0" SIZE="2"><i>LEADING</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>false</b></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addComponent(</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jLabel2</font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>DEFAULT_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">81,</p>
+<p ALIGN="LEFT">Short.</font><font COLOR="#0000c0" SIZE="2"><i>MAX_VALUE</i></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addComponent(</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jLabel3</font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>DEFAULT_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">81,</p>
+<p ALIGN="LEFT">Short.</font><font COLOR="#0000c0" SIZE="2"><i>MAX_VALUE</i></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addComponent(</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jButton2</font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>DEFAULT_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>DEFAULT_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">Short.</font><font COLOR="#0000c0" SIZE="2"><i>MAX_VALUE</i></font><font SIZE="2">))))</p>
+<p ALIGN="LEFT">.addGap(25, 25, 25)</p>
+<p ALIGN="LEFT">.addGroup(</p>
+<p ALIGN="LEFT">jPanel1Layout</p>
+<p ALIGN="LEFT">.createParallelGroup(</p>
+<p ALIGN="LEFT">GroupLayout.Alignment.</font><font COLOR="#0000c0" SIZE="2"><i>LEADING</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>false</b></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addComponent(</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jComboBox1</font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>PREFERRED_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>DEFAULT_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>PREFERRED_SIZE</i></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addComponent(</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jTextField1</font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>DEFAULT_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">110,</p>
+<p ALIGN="LEFT">Short.</font><font COLOR="#0000c0" SIZE="2"><i>MAX_VALUE</i></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addComponent(</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jPasswordField1</font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addComponent(</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jButton1</font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>PREFERRED_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">94,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>PREFERRED_SIZE</i></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addGroup(</p>
+<p ALIGN="LEFT">jPanel1Layout</p>
+<p ALIGN="LEFT">.createSequentialGroup()</p>
+<p ALIGN="LEFT">.addComponent(</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jTextArea1</font><font SIZE="2">,</p>
+<p ALIGN="LEFT">javax.swing.GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>PREFERRED_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">200,</p>
+<p ALIGN="LEFT">javax.swing.GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>PREFERRED_SIZE</i></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addGap(16,</p>
+<p ALIGN="LEFT">16,</p>
+<p ALIGN="LEFT">16)))</p>
+<p ALIGN="LEFT">.addContainerGap(598, Short.</font><font COLOR="#0000c0" SIZE="2"><i>MAX_VALUE</i></font><font SIZE="2">)));</p>
+<p ALIGN="LEFT">jPanel1Layout</p>
+<p ALIGN="LEFT">.setVerticalGroup(jPanel1Layout</p>
+<p ALIGN="LEFT">.createParallelGroup(GroupLayout.Alignment.</font><font COLOR="#0000c0" SIZE="2"><i>LEADING</i></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addGroup(</p>
+<p ALIGN="LEFT">jPanel1Layout</p>
+<p ALIGN="LEFT">.createSequentialGroup()</p>
+<p ALIGN="LEFT">.addGap(33, 33, 33)</p>
+<p ALIGN="LEFT">.addGroup(</p>
+<p ALIGN="LEFT">jPanel1Layout</p>
+<p ALIGN="LEFT">.createParallelGroup(</p>
+<p ALIGN="LEFT">GroupLayout.Alignment.</font><font COLOR="#0000c0" SIZE="2"><i>BASELINE</i></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addComponent(</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jComboBox1</font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>PREFERRED_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>DEFAULT_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>PREFERRED_SIZE</i></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addComponent(</font><font COLOR="#0000c0" SIZE="2">jLabel1</font><font SIZE="2">))</p>
+<p ALIGN="LEFT">.addPreferredGap(</p>
+<p ALIGN="LEFT">LayoutStyle.ComponentPlacement.</font><font COLOR="#0000c0" SIZE="2"><i>RELATED</i></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addGroup(</p>
+<p ALIGN="LEFT">jPanel1Layout</p>
+<p ALIGN="LEFT">.createParallelGroup(</p>
+<p ALIGN="LEFT">GroupLayout.Alignment.</font><font COLOR="#0000c0" SIZE="2"><i>BASELINE</i></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addComponent(</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jLabel2</font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>DEFAULT_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>DEFAULT_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">Short.</font><font COLOR="#0000c0" SIZE="2"><i>MAX_VALUE</i></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addComponent(</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jTextField1</font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>PREFERRED_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>DEFAULT_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>PREFERRED_SIZE</i></font><font SIZE="2">))</p>
+<p ALIGN="LEFT">.addPreferredGap(</p>
+<p ALIGN="LEFT">LayoutStyle.ComponentPlacement.</font><font COLOR="#0000c0" SIZE="2"><i>UNRELATED</i></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addGroup(</p>
+<p ALIGN="LEFT">jPanel1Layout</p>
+<p ALIGN="LEFT">.createParallelGroup(</p>
+<p ALIGN="LEFT">GroupLayout.Alignment.</font><font COLOR="#0000c0" SIZE="2"><i>BASELINE</i></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addComponent(</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jLabel3</font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>DEFAULT_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>DEFAULT_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">Short.</font><font COLOR="#0000c0" SIZE="2"><i>MAX_VALUE</i></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addComponent(</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jPasswordField1</font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>PREFERRED_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>DEFAULT_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>PREFERRED_SIZE</i></font><font SIZE="2">))</p>
+<p ALIGN="LEFT">.addGap(18, 18, 18)</p>
+<p ALIGN="LEFT">.addGroup(</p>
+<p ALIGN="LEFT">jPanel1Layout</p>
+<p ALIGN="LEFT">.createParallelGroup(</p>
+<p ALIGN="LEFT">javax.swing.GroupLayout.Alignment.</font><font COLOR="#0000c0" SIZE="2"><i>BASELINE</i></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addComponent(</font><font COLOR="#0000c0" SIZE="2">jButton1</font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addComponent(</font><font COLOR="#0000c0" SIZE="2">jButton2</font><font SIZE="2">))</p>
+<p ALIGN="LEFT">.addGap(18, 18, 18)</p>
+<p ALIGN="LEFT">.addComponent(</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jTextArea1</font><font SIZE="2">,</p>
+<p ALIGN="LEFT">javax.swing.GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>PREFERRED_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">57,</p>
+<p ALIGN="LEFT">javax.swing.GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>PREFERRED_SIZE</i></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addGap(394, 394, 394)));</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT">layoutManage();</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">layout</font><font SIZE="2">.setHorizontalGroup(</font><font COLOR="#0000c0" SIZE="2">layout</font><font SIZE="2">.createParallelGroup(</p>
+<p ALIGN="LEFT">GroupLayout.Alignment.</font><font COLOR="#0000c0" SIZE="2"><i>LEADING</i></font><font SIZE="2">).addGroup(</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">layout</font><font SIZE="2">.createSequentialGroup()</p>
+<p ALIGN="LEFT">.addContainerGap()</p>
+<p ALIGN="LEFT">.addComponent(</font><font COLOR="#0000c0" SIZE="2">jPanel1</font><font SIZE="2">, 
+GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>DEFAULT_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>DEFAULT_SIZE</i></font><font SIZE="2">, 
+Short.</font><font COLOR="#0000c0" SIZE="2"><i>MAX_VALUE</i></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addContainerGap()));</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">layout</font><font SIZE="2">.setVerticalGroup(</font><font COLOR="#0000c0" SIZE="2">layout</font><font SIZE="2">.createParallelGroup(</p>
+<p ALIGN="LEFT">GroupLayout.Alignment.</font><font COLOR="#0000c0" SIZE="2"><i>LEADING</i></font><font SIZE="2">).addGroup(</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">layout</font><font SIZE="2">.createSequentialGroup()</p>
+<p ALIGN="LEFT">.addContainerGap()</p>
+<p ALIGN="LEFT">.addComponent(</font><font COLOR="#0000c0" SIZE="2">jPanel1</font><font SIZE="2">, 
+GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>DEFAULT_SIZE</i></font><font SIZE="2">,</p>
+<p ALIGN="LEFT">GroupLayout.</font><font COLOR="#0000c0" SIZE="2"><i>DEFAULT_SIZE</i></font><font SIZE="2">, 
+Short.</font><font COLOR="#0000c0" SIZE="2"><i>MAX_VALUE</i></font><font SIZE="2">)</p>
+<p ALIGN="LEFT">.addContainerGap()));</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">Jframe1</font><font SIZE="2">.pack();</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jTextArea1</font><font SIZE="2">.setVisible(</font><font COLOR="#7f0055" SIZE="2"><b>false</b></font><font SIZE="2">);</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jTextArea1</font><font SIZE="2">.setEditable(</font><font COLOR="#7f0055" SIZE="2"><b>false</b></font><font SIZE="2">);</p>
+<p ALIGN="LEFT">}</font><font COLOR="#3f7f5f" SIZE="2">// &lt;/editor-fold&gt;</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>private</b></font><font SIZE="2">
+</font><font COLOR="#7f0055" SIZE="2"><b>void</b></font><font SIZE="2"> 
+layoutManage() {</p>
+<p ALIGN="LEFT"></font><font COLOR="#3f7f5f" SIZE="2">// </font>
+<font COLOR="#7f9fbf" SIZE="2"><b>TODO</b></font><font COLOR="#3f7f5f" SIZE="2"> 
+Auto-generated method stub</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>if</b></font><font SIZE="2"> 
+(</font><font COLOR="#0000c0" SIZE="2">rootPane</font><font SIZE="2"> != </font>
+<font COLOR="#7f0055" SIZE="2"><b>null</b></font><font SIZE="2">) {</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">layout</font><font SIZE="2"> 
+= </font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+GroupLayout(</font><font COLOR="#0000c0" SIZE="2">rootPane</font><font SIZE="2">);</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">rootPane</font><font SIZE="2">.setLayout(</font><font COLOR="#0000c0" SIZE="2">layout</font><font SIZE="2">);</p>
+<p ALIGN="LEFT">} </font><font COLOR="#7f0055" SIZE="2"><b>else</b></font><font SIZE="2"> 
+{</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">layout</font><font SIZE="2"> 
+= </font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+GroupLayout(getContentPane());</p>
+<p ALIGN="LEFT">getContentPane().setLayout(</font><font COLOR="#0000c0" SIZE="2">layout</font><font SIZE="2">);</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>private</b></font><font SIZE="2">
+</font><font COLOR="#7f0055" SIZE="2"><b>void</b></font><font SIZE="2"> 
+jButton1ActionPerformed(ActionEvent evt) {</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>try</b></font><font SIZE="2"> 
+{</p>
+<p ALIGN="LEFT"></font><font COLOR="#3f7f5f" SIZE="2">// get input data for 
+sending</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT">String userid = </font><font COLOR="#0000c0" SIZE="2">
+jTextField1</font><font SIZE="2">.getText();</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>if</b></font><font SIZE="2"> 
+(userid.isEmpty()) {</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jTextArea1</font><font SIZE="2">.setText(</font><font COLOR="#2a00ff" SIZE="2">&quot;Message: 
+Enter User ID&quot;</font><font SIZE="2">);</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jTextArea1</font><font SIZE="2">.setVisible(</font><font COLOR="#7f0055" SIZE="2"><b>true</b></font><font SIZE="2">);</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>return</b></font><font SIZE="2">;</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></font><font COLOR="#646464" SIZE="2">@SuppressWarnings</font><font SIZE="2">(</font><font COLOR="#2a00ff" SIZE="2">&quot;deprecation&quot;</font><font SIZE="2">)</p>
+<p ALIGN="LEFT">String pwd = </font><font COLOR="#0000c0" SIZE="2">
+jPasswordField1</font><font SIZE="2">.<strike>getText</strike>();</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>if</b></font><font SIZE="2"> 
+(pwd.isEmpty()) {</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jTextArea1</font><font SIZE="2">.setText(</font><font COLOR="#2a00ff" SIZE="2">&quot;Message: 
+Enter User Password&quot;</font><font SIZE="2">);</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jTextArea1</font><font SIZE="2">.setVisible(</font><font COLOR="#7f0055" SIZE="2"><b>true</b></font><font SIZE="2">);</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>return</b></font><font SIZE="2">;</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT">String lv_subrc = </font><font COLOR="#2a00ff" SIZE="2">&quot;0&quot;</font><font SIZE="2">;</p>
+<p ALIGN="LEFT"></font><font COLOR="#3f7f5f" SIZE="2">// DBFetch(<u>userid</u> ,
+<u>pwd</u>);</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>if</b></font><font SIZE="2"> 
+(lv_subrc == </font><font COLOR="#2a00ff" SIZE="2">&quot;0&quot;</font><font SIZE="2">) {</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>if</b></font><font SIZE="2"> 
+(</font><font COLOR="#0000c0" SIZE="2">rootPane</font><font SIZE="2"> != </font>
+<font COLOR="#7f0055" SIZE="2"><b>null</b></font><font SIZE="2">) {</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">rootPane</font><font SIZE="2">.removeAll();</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2">
+<u>AccountView1</u>(</font><font COLOR="#0000c0" SIZE="2">rootPane</font><font SIZE="2">);</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>this</b></font><font SIZE="2">.repaint();</p>
+<p ALIGN="LEFT">} </font><font COLOR="#7f0055" SIZE="2"><b>else</b></font><font SIZE="2"> 
+{</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>this</b></font><font SIZE="2">.getContentPane().removeAll();</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2">
+<u>AccountView1</u>(</font><font COLOR="#7f0055" SIZE="2"><b>this</b></font><font SIZE="2">.getContentPane());</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>this</b></font><font SIZE="2">.repaint();</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT">} </font><font COLOR="#7f0055" SIZE="2"><b>else</b></font><font SIZE="2"> 
+{</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jTextArea1</font><font SIZE="2">.setText(</font><font COLOR="#2a00ff" SIZE="2">&quot;Invalid 
+Credentials&quot;</font><font SIZE="2">);</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">jTextArea1</font><font SIZE="2">.setVisible(</font><font COLOR="#7f0055" SIZE="2"><b>true</b></font><font SIZE="2">);</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT">} </font><font COLOR="#7f0055" SIZE="2"><b>catch</b></font><font SIZE="2"> 
+(Exception ex) {</p>
+<p ALIGN="LEFT">ex.printStackTrace();</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>public</b></font><font SIZE="2"> 
+String DBFetch(String usid, String pwd) {</p>
+<p ALIGN="LEFT"></font><font COLOR="#3f7f5f" SIZE="2">// </font>
+<font COLOR="#7f9fbf" SIZE="2"><b>TODO</b></font><font COLOR="#3f7f5f" SIZE="2"> 
+Auto-generated method stub</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT">String url = </font><font COLOR="#2a00ff" SIZE="2">
+&quot;jdbc:mysql://sql2.njit.edu:3306/js595&quot;</font><font SIZE="2">;</p>
+<p ALIGN="LEFT">String lv_subrc = </font><font COLOR="#7f0055" SIZE="2"><b>null</b></font><font SIZE="2">;</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT">Connection connection = </font><font COLOR="#7f0055" SIZE="2">
+<b>null</b></font><font SIZE="2">;</p>
+<p ALIGN="LEFT">Statement statement = </font><font COLOR="#7f0055" SIZE="2"><b>
+null</b></font><font SIZE="2">;</p>
+<p ALIGN="LEFT">ResultSet rs = </font><font COLOR="#7f0055" SIZE="2"><b>null</b></font><font SIZE="2">;</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>try</b></font><font SIZE="2"> 
+{</p>
+<p ALIGN="LEFT">Class.<i>forName</i>(</font><font COLOR="#2a00ff" SIZE="2">&quot;com.mysql.jdbc.Driver&quot;</font><font SIZE="2">);</p>
+<p ALIGN="LEFT">} </font><font COLOR="#7f0055" SIZE="2"><b>catch</b></font><font SIZE="2"> 
+(ClassNotFoundException e1) {</p>
+<p ALIGN="LEFT"></font><font COLOR="#3f7f5f" SIZE="2">// </font>
+<font COLOR="#7f9fbf" SIZE="2"><b>TODO</b></font><font COLOR="#3f7f5f" SIZE="2"> 
+Auto-generated catch block</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT">e1.printStackTrace();</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>try</b></font><font SIZE="2"> 
+{</p>
+<p ALIGN="LEFT">connection = DriverManager.<i>getConnection</i>(url, </font>
+<font COLOR="#2a00ff" SIZE="2">&quot;js595&quot;</font><font SIZE="2">, </font>
+<font COLOR="#2a00ff" SIZE="2">&quot;q5uX7be5&quot;</font><font SIZE="2">);</p>
+<p ALIGN="LEFT">} </font><font COLOR="#7f0055" SIZE="2"><b>catch</b></font><font SIZE="2"> 
+(SQLException e1) {</p>
+<p ALIGN="LEFT"></font><font COLOR="#3f7f5f" SIZE="2">// </font>
+<font COLOR="#7f9fbf" SIZE="2"><b>TODO</b></font><font COLOR="#3f7f5f" SIZE="2"> 
+Auto-generated catch block</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT">e1.printStackTrace();</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>try</b></font><font SIZE="2"> 
+{</p>
+<p ALIGN="LEFT">statement = connection.createStatement();</p>
+<p ALIGN="LEFT">} </font><font COLOR="#7f0055" SIZE="2"><b>catch</b></font><font SIZE="2"> 
+(SQLException e1) {</p>
+<p ALIGN="LEFT"></font><font COLOR="#3f7f5f" SIZE="2">// </font>
+<font COLOR="#7f9fbf" SIZE="2"><b>TODO</b></font><font COLOR="#3f7f5f" SIZE="2"> 
+Auto-generated catch block</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT">e1.printStackTrace();</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>try</b></font><font SIZE="2"> 
+{</p>
+<p ALIGN="LEFT">rs = statement</p>
+<p ALIGN="LEFT">.executeQuery(</font><font COLOR="#2a00ff" SIZE="2">&quot;SELECT * 
+FROM &#39;Login&#39; WHERE &#39;email_id&#39; = &quot;</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT">+ usid + </font><font COLOR="#2a00ff" SIZE="2">&quot;AND password =&quot;</font><font SIZE="2"> 
++ pwd);</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT">} </font><font COLOR="#7f0055" SIZE="2"><b>catch</b></font><font SIZE="2"> 
+(SQLException e1) {</p>
+<p ALIGN="LEFT"></font><font COLOR="#3f7f5f" SIZE="2">// </font>
+<font COLOR="#7f9fbf" SIZE="2"><b>TODO</b></font><font COLOR="#3f7f5f" SIZE="2"> 
+Auto-generated catch block</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT">e1.printStackTrace();</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>try</b></font><font SIZE="2"> 
+{</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>while</b></font><font SIZE="2"> 
+(rs.next()) {</p>
+<p ALIGN="LEFT">lv_subrc = </font><font COLOR="#2a00ff" SIZE="2">&quot;0&quot;</font><font SIZE="2">;</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT">} </font><font COLOR="#7f0055" SIZE="2"><b>catch</b></font><font SIZE="2"> 
+(SQLException e) {</p>
+<p ALIGN="LEFT"></font><font COLOR="#3f7f5f" SIZE="2">// </font>
+<font COLOR="#7f9fbf" SIZE="2"><b>TODO</b></font><font COLOR="#3f7f5f" SIZE="2"> 
+Auto-generated catch block</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT">e.printStackTrace();</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>try</b></font><font SIZE="2"> 
+{</p>
+<p ALIGN="LEFT">rs.close();</p>
+<p ALIGN="LEFT">} </font><font COLOR="#7f0055" SIZE="2"><b>catch</b></font><font SIZE="2"> 
+(SQLException e) {</p>
+<p ALIGN="LEFT"></font><font COLOR="#3f7f5f" SIZE="2">// </font>
+<font COLOR="#7f9fbf" SIZE="2"><b>TODO</b></font><font COLOR="#3f7f5f" SIZE="2"> 
+Auto-generated catch block</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT">e.printStackTrace();</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>return</b></font><font SIZE="2"> 
+lv_subrc;</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>private</b></font><font SIZE="2">
+</font><font COLOR="#7f0055" SIZE="2"><b>void</b></font><font SIZE="2"> 
+jTextField1ActionPerformed(ActionEvent evt) {</p>
+<p ALIGN="LEFT"></font><font COLOR="#3f7f5f" SIZE="2">// </font>
+<font COLOR="#7f9fbf" SIZE="2"><b>TODO</b></font><font COLOR="#3f7f5f" SIZE="2"> 
+add your handling code here:</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>private</b></font><font SIZE="2">
+</font><font COLOR="#7f0055" SIZE="2"><b>void</b></font><font SIZE="2"> 
+jComboBox1ActionPerformed(ActionEvent evt) {</p>
+<p ALIGN="LEFT"></font><font COLOR="#3f7f5f" SIZE="2">// </font>
+<font COLOR="#7f9fbf" SIZE="2"><b>TODO</b></font><font COLOR="#3f7f5f" SIZE="2"> 
+add your handling code here:</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>private</b></font><font SIZE="2">
+</font><font COLOR="#7f0055" SIZE="2"><b>void</b></font><font SIZE="2"> 
+jButton2ActionPerformed(ActionEvent evt) {</p>
+<p ALIGN="LEFT"></font><font COLOR="#3f7f5f" SIZE="2">// </font>
+<font COLOR="#7f9fbf" SIZE="2"><b>TODO</b></font><font COLOR="#3f7f5f" SIZE="2"> 
+add your handling code here:</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>if</b></font><font SIZE="2"> 
+(</font><font COLOR="#0000c0" SIZE="2">rootPane</font><font SIZE="2"> != </font>
+<font COLOR="#7f0055" SIZE="2"><b>null</b></font><font SIZE="2">) {</p>
+<p ALIGN="LEFT"></font><font COLOR="#0000c0" SIZE="2">rootPane</font><font SIZE="2">.removeAll();</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+RegistrationPage1(</font><font COLOR="#0000c0" SIZE="2">rootPane</font><font SIZE="2">);</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>this</b></font><font SIZE="2">.repaint();</p>
+<p ALIGN="LEFT">} </font><font COLOR="#7f0055" SIZE="2"><b>else</b></font><font SIZE="2"> 
+{</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>this</b></font><font SIZE="2">.getContentPane().removeAll();</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+RegistrationPage1(</font><font COLOR="#7f0055" SIZE="2"><b>this</b></font><font SIZE="2">.getContentPane());</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>this</b></font><font SIZE="2">.repaint();</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#3f5fbf" SIZE="2">/**</p>
+<p ALIGN="LEFT">* Get a connection to the <u>servlet</u>.</p>
+<p ALIGN="LEFT">*/</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>private</b></font><font SIZE="2"> 
+URLConnection getServletConnection() </font><font COLOR="#7f0055" SIZE="2"><b>
+throws</b></font><font SIZE="2"> MalformedURLException,</p>
+<p ALIGN="LEFT">IOException {</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT">String loginType = (String) </font>
+<font COLOR="#0000c0" SIZE="2">jComboBox1</font><font SIZE="2">.getSelectedItem();</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT">URL urlServlet = </font><font COLOR="#7f0055" SIZE="2"><b>new</b></font><font SIZE="2"> 
+URL(</font><font COLOR="#2a00ff" SIZE="2">&quot;http://localhost:8080/login?usid=&quot;</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT">+ </font><font COLOR="#0000c0" SIZE="2">jTextField1</font><font SIZE="2">.getText() 
++ </font><font COLOR="#2a00ff" SIZE="2">&quot;?pwd=&quot;</font><font SIZE="2"> + </font>
+<font COLOR="#0000c0" SIZE="2">jPasswordField1</font><font SIZE="2">.<u><strike>getText</strike>()</p>
+</u>
+<p ALIGN="LEFT">+ </font><font COLOR="#2a00ff" SIZE="2">&quot;?type=&quot;</font><font SIZE="2"> 
++ loginType);</p>
+<p ALIGN="LEFT">URLConnection con = urlServlet.openConnection();</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT">con.setDoInput(</font><font COLOR="#7f0055" SIZE="2"><b>true</b></font><font SIZE="2">);</p>
+<p ALIGN="LEFT">con.setDoOutput(</font><font COLOR="#7f0055" SIZE="2"><b>true</b></font><font SIZE="2">);</p>
+<p ALIGN="LEFT">con.setUseCaches(</font><font COLOR="#7f0055" SIZE="2"><b>false</b></font><font SIZE="2">);</p>
+<p ALIGN="LEFT">con.setRequestProperty(</font><font COLOR="#2a00ff" SIZE="2">&quot;Content-Type&quot;</font><font SIZE="2">,</p>
+<p ALIGN="LEFT"></font><font COLOR="#2a00ff" SIZE="2">
+&quot;application/x-java-serialized-object&quot;</font><font SIZE="2">);</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>return</b></font><font SIZE="2"> 
+con;</p>
+<p ALIGN="LEFT">}</p>
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#3f5fbf" SIZE="2">/**</p>
+<p ALIGN="LEFT">* </font><font COLOR="#7f9fbf" SIZE="2"><b>@param</b></font><font COLOR="#3f5fbf" SIZE="2"> 
+args</p>
+<p ALIGN="LEFT">* the command line arguments</p>
+<p ALIGN="LEFT">*/</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT"></p>
+<p ALIGN="LEFT"></font><font COLOR="#3f7f5f" SIZE="2">// Variables declaration - 
+do not modify</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>private</b></font><font SIZE="2"> 
+JButton </font><font COLOR="#0000c0" SIZE="2">jButton1</font><font SIZE="2">;</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>private</b></font><font SIZE="2"> 
+JButton </font><font COLOR="#0000c0" SIZE="2">jButton2</font><font SIZE="2">;</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>private</b></font><font SIZE="2"> 
+JComboBox </font><font COLOR="#0000c0" SIZE="2">jComboBox1</font><font SIZE="2">;</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>private</b></font><font SIZE="2"> 
+JLabel </font><font COLOR="#0000c0" SIZE="2">jLabel1</font><font SIZE="2">;</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>private</b></font><font SIZE="2"> 
+JLabel </font><font COLOR="#0000c0" SIZE="2">jLabel2</font><font SIZE="2">;</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>private</b></font><font SIZE="2"> 
+JLabel </font><font COLOR="#0000c0" SIZE="2">jLabel3</font><font SIZE="2">;</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>private</b></font><font SIZE="2"> 
+JPanel </font><font COLOR="#0000c0" SIZE="2">jPanel1</font><font SIZE="2">;</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>private</b></font><font SIZE="2"> 
+JPasswordField </font><font COLOR="#0000c0" SIZE="2">jPasswordField1</font><font SIZE="2">;</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>private</b></font><font SIZE="2"> 
+JTextField </font><font COLOR="#0000c0" SIZE="2">jTextField1</font><font SIZE="2">;</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>private</b></font><font SIZE="2"> 
+JTextArea </font><font COLOR="#0000c0" SIZE="2">jTextArea1</font><font SIZE="2">;</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>private</b></font><font SIZE="2"> 
+JFrame </font><font COLOR="#0000c0" SIZE="2">Jframe1</font><font SIZE="2">;</p>
+<p ALIGN="LEFT"></font><font COLOR="#7f0055" SIZE="2"><b>private</b></font><font SIZE="2"> 
+Container </font><font COLOR="#0000c0" SIZE="2">rootPane</font><font SIZE="2">;</p>
+<p ALIGN="LEFT">GroupLayout </font><font COLOR="#0000c0" SIZE="2">layout</font><font SIZE="2">;</p>
+<p ALIGN="LEFT"></font><font COLOR="#3f7f5f" SIZE="2">// End of variables 
+declaration</p>
+</font><font SIZE="2">
+<p ALIGN="LEFT">}</p>
+</font>
+
+</body>
+
+</html>

@@ -1,0 +1,647 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+<style type="text/css">
+.auto-style2 {
+	font-weight: bold;
+}
+.auto-style3 {
+	font-size: medium;
+}
+.auto-style4 {
+	font-weight: bold;
+	font-size: small;
+	font-family: "Courier New";
+}
+.auto-style6 {
+	font-size: x-large;
+	text-align: center;
+	font-family: "Courier New";
+}
+.auto-style7 {
+	text-align: center;
+	color: #800000;
+	font-family: "Courier New";
+}
+.auto-style9 {
+	font-weight: bold;
+	font-size: x-large;
+	text-align: center;
+	font-family: "Courier New";
+}
+.auto-style10 {
+	font-weight: bold;
+	font-size: x-large;
+	text-align: left;
+}
+.auto-style12 {
+	font-size: small;
+	font-family: "Courier New";
+}
+.auto-style13 {
+	font-size: 10.0pt;
+	font-family: "Courier New";
+}
+.auto-style15 {
+	font-size: medium;
+	font-family: "Courier New";
+}
+.auto-style16 {
+	font-weight: bold;
+	font-size: medium;
+	font-family: "Courier New";
+}
+</style>
+</head>
+
+<body style="background-color: #C0C0C0; background-image: url('light-wood-texture.jpg');">
+
+<h2 class="auto-style7">Source Code</h2>
+
+<p class="auto-style12">&nbsp;</p>
+<p class="auto-style6"><strong>DIGITAL CLOCK WITH HARDCODED FONT</strong></p>
+<p class="auto-style4"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #7F0055">import</span><span class="auto-style16" style="color: black"> 
+java.awt.*;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #7F0055">import</span><span class="auto-style16" style="color: black"> 
+java.util.*;</span><span class="auto-style16"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F5FBF">
+/************************************************************************ </span>
+<span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: #3F5FBF"><b>* 
+Functionality:</b><span class="auto-style2" style="mso-spacerun:yes">&nbsp;
+</span><b>1. To display the Time in 12 hour format</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style3" style="font-family: Consolas; color: #3F5FBF">*</span><span class="auto-style15" style="color: #3F5FBF"><span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>2. To display the date as mentioned in the exercise 4.9</b></span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F5FBF">
+*************************************************************************</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F5FBF">* Author: 
+Janani Swaminathan ( JS595 )</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F5FBF">* </span>
+<span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F5FBF">*/</span><span class="auto-style16" style="color: black">
+</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #7F0055">public</span><span class="auto-style16" style="color: black">
+</span><span class="auto-style16" style="color: #7F0055">class</span><span class="auto-style16" style="color: black"> 
+DigitalClock </span><span class="auto-style16" style="color: #7F0055">extends</span><span class="auto-style16" style="color: black"> 
+java.applet.Applet </span><span class="auto-style16" style="color: #7F0055">
+implements</span><span class="auto-style16" style="color: black"> Runnable
+</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span>
+</p>
+<p class="MsoNormal"><span class="auto-style16" style="color: black">{</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;</span></span><span class="auto-style16" style="color: #3F7F5F">// 
+Initiate / assign Thread, Color, and Font.</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">protected</span><span class="auto-style16" style="color: black"> 
+Thread clockThread = </span><span class="auto-style16" style="color: #7F0055">
+null</span><span class="auto-style16" style="color: black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">protected</span><span class="auto-style16" style="color: black"> 
+Font font = </span><span class="auto-style16" style="color: #7F0055">new</span><span class="auto-style16" style="color: black"> 
+Font(</span><span class="auto-style16" style="color: #2A00FF">"Monospaced"</span><span class="auto-style16" style="color: black">, 
+Font.BOLD, 48);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">protected</span><span class="auto-style15" style="color: black"><b> 
+Color color =</b><span class="auto-style2" style="mso-spacerun:yes">&nbsp;
+</span><b>Color.BLUE;</b></span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F7F5F">// 
+Declare global variable</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>String Hm;</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16"><o:p>&nbsp;</o:p></span><span class="auto-style16" style="color: #3F7F5F">// 
+Implement the start method </span>
+<span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">public</span><span class="auto-style16" style="color: black">
+</span><span class="auto-style16" style="color: #7F0055">void</span><span class="auto-style16" style="color: black"> 
+start()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp; </span><b>{</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">if</span><span class="auto-style16" style="color: black"> 
+(clockThread == </span><span class="auto-style16" style="color: #7F0055">null</span><span class="auto-style16" style="color: black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>{</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="auto-style2" style="mso-spacerun:yes">&nbsp;</span><b>clockThread 
+= </b></span><span class="auto-style16" style="color: #7F0055">new</span><span class="auto-style16" style="color: black"> 
+Thread(</span><span class="auto-style16" style="color: #7F0055">this</span><span class="auto-style16" style="color: black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F7F5F">// Start 
+new thread </span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="auto-style2" style="mso-spacerun:yes">&nbsp;</span><b>clockThread.start();</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>}</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp; </span><b>}</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16"><o:p>&nbsp;</o:p></span><span class="auto-style16" style="color: #3F7F5F">// 
+Implement the Stop method</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">public</span><span class="auto-style16" style="color: black">
+</span><span class="auto-style16" style="color: #7F0055">void</span><span class="auto-style16" style="color: black"> 
+stop()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp; </span><b>{</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><b>
+clockThread = </b></span><span class="auto-style16" style="color: #7F0055">null</span><span class="auto-style16" style="color: black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp; </span>}<span class="auto-style2" style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal"><span class="auto-style16"><o:p>&nbsp;</o:p></span><span class="auto-style16" style="color: #3F7F5F">// 
+Implement Run method</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">public</span><span class="auto-style16" style="color: black">
+</span><span class="auto-style16" style="color: #7F0055">void</span><span class="auto-style16" style="color: black"> 
+run()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp; </span><b>{</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>
+</span><span class="auto-style16" style="color: #7F0055">while</span><span class="auto-style16" style="color: black"> 
+(Thread.currentThread() == clockThread)</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><b>
+{</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F7F5F">// Call 
+the repaint method which will in turn call the paint menthod</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>repaint();</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">try</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>{</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>Thread.currentThread().sleep(1000);</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>}</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">catch</span><span class="auto-style16" style="color: black"> 
+(InterruptedException e){}</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><b>
+}</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp; </span>}<span class="auto-style2" style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp; </span></span>
+<span class="auto-style16" style="color: #3F7F5F">// Implement paint method</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">public</span><span class="auto-style16" style="color: black">
+</span><span class="auto-style16" style="color: #7F0055">void</span><span class="auto-style16" style="color: black"> 
+paint( Graphics g)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp; </span><b>{</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F7F5F">// 
+Instantiate the Locale class which will be used later</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><b>
+Locale local = Locale.ENGLISH;</b></span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><b>
+Calendar calendar = Calendar.getInstance();</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16"><o:p>&nbsp;</o:p></span><span class="auto-style16" style="color: #3F7F5F">// 
+Fetch Month, Year, Day and Weekday for displaying in the Applet</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F7F5F">// Value 
+passed to the method getDisplayName with the following arguments</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F7F5F">// ( Int 
+"Fieldname", Int "Style name", Locale )</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F7F5F">// Field 
+name and Integer value </span>
+<span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: #3F7F5F"><b>// 
+YEAR = 1, MONTH = 2, DATE</b><span class="auto-style2" style="mso-spacerun:yes">&nbsp;
+</span><b>= 5, DAY_OF_WEEK = 7, AM_PM = 9</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F7F5F">// Style 
+SHORT = 1, LONG = 2</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16"><o:p>&nbsp;</o:p></span><span class="auto-style16" style="color: #3F7F5F">// 
+Get the Month Name ( Short name )</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><b>
+String month = calendar.getDisplayName(2, 1, local);</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>
+</span><span class="auto-style16" style="color: #7F0055">int</span><span class="auto-style16" style="color: black"> 
+year = calendar.get(Calendar.YEAR);</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>
+</span><span class="auto-style16" style="color: #7F0055">int</span><span class="auto-style15" style="color: black"><b> 
+day =</b><span class="auto-style2" style="mso-spacerun:yes">&nbsp; </span><b>
+calendar.get(Calendar.DAY_OF_MONTH); </b></span>
+<span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16"><o:p>&nbsp;</o:p></span><span class="auto-style16" style="color: #3F7F5F">// 
+Get the short name of the weekday</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><b>
+String WeekDay = calendar.getDisplayName(7,1, local);</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16"><o:p>&nbsp;</o:p></span><span class="auto-style16" style="color: #3F7F5F">// 
+Fetch the Time</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F7F5F">// Get 
+the value of AM / PM</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>Hm = calendar.getDisplayName(9, 1 , local);</b></span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">int</span><span class="auto-style16" style="color: black"> 
+hour = calendar.get(Calendar.HOUR);</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">int</span><span class="auto-style16" style="color: black"> 
+minute = calendar.get(Calendar.MINUTE);</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">int</span><span class="auto-style16" style="color: black"> 
+second = calendar.get(Calendar.SECOND);</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="auto-style16"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F7F5F">// Set 
+the Font and color</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>g.setFont(font);</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>g.setColor(color);</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="auto-style16"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F7F5F">// Draw 
+the string </span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>g.drawString( hour + </b></span>
+<span class="auto-style16" style="color: #2A00FF">":"</span><span class="auto-style16" style="color: black"> 
++ minute / 10 + minute % 10 +</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #2A00FF">":"</span><span class="auto-style16" style="color: black"> 
++ second / 10 + second % 10 + </span>
+<span class="auto-style16" style="color: #2A00FF">" "</span><span class="auto-style16" style="color: black"> 
++ Hm, 10 , 60 );</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16"><o:p>&nbsp;</o:p></span><span class="auto-style15" style="color: black"><span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>g.drawString( day + </b></span>
+<span class="auto-style16" style="color: #2A00FF">" "</span><span class="auto-style15" style="color: black"><b> 
++</b><span class="auto-style2" style="mso-spacerun:yes">&nbsp; </span><b>month +
+</b></span><span class="auto-style16" style="color: #2A00FF">" "</span><span class="auto-style16" style="color: black"> 
++ year + </span><span class="auto-style16" style="color: #2A00FF">" "</span><span class="auto-style16" style="color: black"> 
++ WeekDay , 10 , 120);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp; </span>}<span class="auto-style2" style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="auto-style2">
+<span class="auto-style15" style="line-height: 115%; color: black">}</span><o:p></o:p></p>
+<p class="auto-style2">
+<o:p></o:p>
+</p>
+<p class="auto-style9">
+<o:p>DIGITAL CLOCK WITH PARAMETARIZED FONT VALUE</o:p></p>
+<p class="auto-style13"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #7F0055">import</span><span class="auto-style16" style="color: black"> 
+java.awt.*;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #7F0055">import</span><span class="auto-style16" style="color: black"> 
+java.util.*;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="auto-style16"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F5FBF">
+/************************************************************************ </span>
+<span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: #3F5FBF"><b>* 
+Functionality:</b><span class="auto-style2" style="mso-spacerun:yes">&nbsp;
+</span><b>1. To display the Time in 12 hour format</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style3" style="font-family: Consolas; color: #3F5FBF">*</span><span class="auto-style15" style="color: #3F5FBF"><span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>2. To display the date as mentioned in the exercise 4.9</b></span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F5FBF">
+*************************************************************************</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F5FBF">* Author: 
+Janani Swaminathan ( JS595 )</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F5FBF">* </span>
+<span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F5FBF">*/</span><span class="auto-style16" style="color: black">
+</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16"><o:p>&nbsp;</o:p></span><span class="auto-style16" style="color: #7F0055">public</span><span class="auto-style16" style="color: black">
+</span><span class="auto-style16" style="color: #7F0055">class</span><span class="auto-style16" style="color: black"> 
+DigitalClockParam </span><span class="auto-style16" style="color: #7F0055">
+extends</span><span class="auto-style16" style="color: black"> 
+java.applet.Applet </span><span class="auto-style16" style="color: #7F0055">
+implements</span><span class="auto-style16" style="color: black"> Runnable
+</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span>
+</p>
+<p class="MsoNormal"><span class="auto-style16" style="color: black">{</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F7F5F">// 
+Declare global variable</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>String Hm;</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16"><o:p>&nbsp;</o:p></span><span class="auto-style15" style="color: black"><span class="auto-style2" style="mso-spacerun:yes">&nbsp;
+</span></span><span class="auto-style16" style="color: #3F7F5F">// Initiate / 
+assign Thread, Color, and Font.</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">protected</span><span class="auto-style16" style="color: black"> 
+Thread clockThread = </span><span class="auto-style16" style="color: #7F0055">
+null</span><span class="auto-style16" style="color: black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">protected</span><span class="auto-style16" style="color: black"> 
+Font font;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">protected</span><span class="auto-style16" style="color: black"> 
+Color color;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16"><o:p>&nbsp;</o:p></span><span class="auto-style15" style="color: black"><span class="auto-style2" style="mso-spacerun:yes">
+</span></span><span class="auto-style16" style="color: #7F0055">public</span><span class="auto-style16" style="color: black">
+</span><span class="auto-style16" style="color: #7F0055">void</span><span class="auto-style16" style="color: black"> 
+init() </span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>{</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16"><o:p>&nbsp;</o:p></span><span class="auto-style15" style="color: black"><span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>String FontName = getParameter(</b></span><span class="auto-style16" style="color: #2A00FF">"font1"</span><span class="auto-style16" style="color: black">);</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="auto-style2" style="mso-spacerun:yes">&nbsp;</span><b>font = </b>
+</span><span class="auto-style16" style="color: #7F0055">new</span><span class="auto-style16" style="color: black"> 
+Font(FontName, Font.BOLD, 40);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="auto-style2" style="mso-spacerun:yes">&nbsp;</span><b>color =</b><span class="auto-style2" style="mso-spacerun:yes">&nbsp;
+</span><b>Color.BLUE;</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>}</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16"><o:p>&nbsp;</o:p></span><span class="auto-style16" style="color: #3F7F5F">// 
+Implement the start method </span>
+<span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">public</span><span class="auto-style16" style="color: black">
+</span><span class="auto-style16" style="color: #7F0055">void</span><span class="auto-style16" style="color: black"> 
+start()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp; </span><b>{</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">if</span><span class="auto-style16" style="color: black"> 
+(clockThread == </span><span class="auto-style16" style="color: #7F0055">null</span><span class="auto-style16" style="color: black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>{</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="auto-style2" style="mso-spacerun:yes">&nbsp;</span><b>clockThread 
+= </b></span><span class="auto-style16" style="color: #7F0055">new</span><span class="auto-style16" style="color: black"> 
+Thread(</span><span class="auto-style16" style="color: #7F0055">this</span><span class="auto-style16" style="color: black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F7F5F">// Start 
+new thread </span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="auto-style2" style="mso-spacerun:yes">&nbsp;</span><b>clockThread.start();</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>}</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp; </span><b>}</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16"><o:p>&nbsp;</o:p></span><span class="auto-style16" style="color: #3F7F5F">// 
+Implement the Stop method</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">public</span><span class="auto-style16" style="color: black">
+</span><span class="auto-style16" style="color: #7F0055">void</span><span class="auto-style16" style="color: black"> 
+stop()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp; </span><b>{</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><b>
+clockThread = </b></span><span class="auto-style16" style="color: #7F0055">null</span><span class="auto-style16" style="color: black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp; </span>}<span class="auto-style2" style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal"><span class="auto-style16"><o:p>&nbsp;</o:p></span><span class="auto-style16" style="color: #3F7F5F">// 
+Implement Run method</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">public</span><span class="auto-style16" style="color: black">
+</span><span class="auto-style16" style="color: #7F0055">void</span><span class="auto-style16" style="color: black"> 
+run()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp; </span><b>{</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>
+</span><span class="auto-style16" style="color: #7F0055">while</span><span class="auto-style16" style="color: black"> 
+(Thread.currentThread() == clockThread)</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><b>
+{</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F7F5F">// Call 
+the repaint method which will in turn call the paint menthod</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>repaint();</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">try</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>{</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>Thread.currentThread().sleep(1000);</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>}</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">catch</span><span class="auto-style16" style="color: black"> 
+(InterruptedException e){}</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><b>
+}</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp; </span>}<span class="auto-style2" style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp; </span></span>
+<span class="auto-style16" style="color: #3F7F5F">// Implement paint method</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">public</span><span class="auto-style16" style="color: black">
+</span><span class="auto-style16" style="color: #7F0055">void</span><span class="auto-style16" style="color: black"> 
+paint( Graphics g)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp; </span><b>{</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F7F5F">// 
+Instantiate the Locale class which will be used later</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><b>
+Locale local = Locale.ENGLISH;</b></span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><b>
+Calendar calendar = Calendar.getInstance();</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F7F5F">// Fetch 
+Month, Year, Day and Weekday for displaying in the Applet</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F7F5F">// Value 
+passed to the method getDisplayName with the following arguments</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F7F5F">// ( Int 
+"Fieldname", Int "Style name", Locale )</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F7F5F">// Field 
+name and Integer value </span>
+<span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: #3F7F5F"><b>// 
+YEAR = 1, MONTH = 2, DATE</b><span class="auto-style2" style="mso-spacerun:yes">&nbsp;
+</span><b>= 5, DAY_OF_WEEK = 7, AM_PM = 9</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F7F5F">// Style 
+SHORT = 1, LONG = 2</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16"><o:p>&nbsp;</o:p></span><span class="auto-style16" style="color: #3F7F5F">// 
+Get the Month Name ( Short name )</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><b>
+String month = calendar.getDisplayName(2, 1, local);</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>
+</span><span class="auto-style16" style="color: #7F0055">int</span><span class="auto-style16" style="color: black"> 
+year = calendar.get(Calendar.YEAR);</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>
+</span><span class="auto-style16" style="color: #7F0055">int</span><span class="auto-style15" style="color: black"><b> 
+day =</b><span class="auto-style2" style="mso-spacerun:yes">&nbsp; </span><b>
+calendar.get(Calendar.DAY_OF_MONTH); </b></span>
+<span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16"><o:p>&nbsp;</o:p></span><span class="auto-style16" style="color: #3F7F5F">// 
+Get the short name of the weekday</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><b>
+String WeekDay = calendar.getDisplayName(7,1, local);</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16"><o:p>&nbsp;</o:p></span><span class="auto-style16" style="color: #3F7F5F">// 
+Fetch the Time</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16" style="color: #3F7F5F">// Get 
+the value of AM / PM</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>Hm = calendar.getDisplayName(9, 1 , local);</b></span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">int</span><span class="auto-style16" style="color: black"> 
+hour = calendar.get(Calendar.HOUR);</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">int</span><span class="auto-style16" style="color: black"> 
+minute = calendar.get(Calendar.MINUTE);</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #7F0055">int</span><span class="auto-style16" style="color: black"> 
+second = calendar.get(Calendar.SECOND);</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16"><o:p>&nbsp;</o:p></span><span class="auto-style16" style="color: #3F7F5F">// 
+Set the Font and color</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>g.setFont(font);</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>g.setColor(color);</b></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16"><o:p>&nbsp;</o:p></span><span class="auto-style16" style="color: #3F7F5F">// 
+Draw the string </span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>g.drawString( hour + </b></span>
+<span class="auto-style16" style="color: #2A00FF">":"</span><span class="auto-style16" style="color: black"> 
++ minute / 10 + minute % 10 +</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style16" style="color: #2A00FF">":"</span><span class="auto-style16" style="color: black"> 
++ second / 10 + second % 10 + </span>
+<span class="auto-style16" style="color: #2A00FF">" "</span><span class="auto-style16" style="color: black"> 
++ Hm, 10 , 60 );</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style16"><o:p>&nbsp;</o:p></span><span class="auto-style15" style="color: black"><span class="auto-style2" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b>g.drawString( day + </b></span>
+<span class="auto-style16" style="color: #2A00FF">" "</span><span class="auto-style15" style="color: black"><b> 
++</b><span class="auto-style2" style="mso-spacerun:yes">&nbsp; </span><b>month +
+</b></span><span class="auto-style16" style="color: #2A00FF">" "</span><span class="auto-style16" style="color: black"> 
++ year + </span><span class="auto-style16" style="color: #2A00FF">" "</span><span class="auto-style16" style="color: black"> 
++ WeekDay , 10 , 120);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style15" style="color: black">
+<span class="auto-style2" style="mso-spacerun:yes">&nbsp;&nbsp; </span>}<span class="auto-style2" style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal"><span class="auto-style16"><o:p>&nbsp;</o:p></span><span class="auto-style16" style="line-height: 115%; color: black">}</span><o:p></o:p></p>
+<p class="auto-style10">
+<o:p></o:p>
+</p>
+<p class="auto-style2">
+<o:p></o:p>
+</p>
+<p class="auto-style16">&nbsp;</p>
+
+</body>
+
+</html>

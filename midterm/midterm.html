@@ -1,0 +1,2384 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+<style type="text/css">
+.auto-style1 {
+	text-align: center;
+	color: #800000;
+}
+.auto-style2 {
+	font-size: large;
+	color: #800000;
+}
+.auto-style3 {
+	color: #800000;
+}
+.ms-grid8-main {
+	border-left-style: none;
+	border-right: .75pt solid navy;
+	border-top: .75pt solid navy;
+	border-bottom: .75pt solid navy;
+	background-color: white;
+}
+.auto-style5 {
+	color: #800000;
+	text-align: left;
+}
+.auto-style27 {
+	color: black;
+	font-size: 11.0pt;
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: none;
+	font-family: Calibri, sans-serif;
+	text-align: general;
+	vertical-align: bottom;
+	white-space: nowrap;
+	border-style: none;
+	border-color: inherit;
+	border-width: medium;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+}
+td
+	{border-style: none;
+	border-color: inherit;
+	border-width: medium;
+	padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Calibri, sans-serif;
+	text-align:general;
+	vertical-align:bottom;
+	white-space:nowrap;
+	}
+.auto-style26 {
+	color: white;
+}
+.auto-style29 {
+	color: black;
+	font-size: 11.0pt;
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: none;
+	font-family: Calibri, sans-serif;
+	text-align: center;
+	vertical-align: bottom;
+	white-space: nowrap;
+	border-style: none;
+	border-color: inherit;
+	border-width: medium;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+}
+.auto-style30 {
+	text-align: center;
+}
+.auto-style32 {
+	color: #000000;
+	text-align: left;
+}
+.auto-style7 {
+	font-family: "Courier New";
+	line-height: 150%;
+}
+.auto-style33 {
+	font-family: "Courier New";
+	font-size: 12pt;
+	line-height: 150%;
+}
+.auto-style6 {
+	text-align: left;
+	font-family: "Courier New";
+	line-height: 150%;
+	font-size: 12pt;
+}
+.auto-style34 {
+	color: #000000;
+	font-family: "Courier New";
+}
+.auto-style35 {
+	color: #000000;
+	text-align: left;
+	font-family: "Courier New";
+}
+.auto-style36 {
+	font-family: "Courier New";
+}
+.auto-style37 {
+	color: #000000;
+}
+.auto-style38 {
+	font-size: large;
+	color: #000000;
+}
+.auto-style39 {
+	font-size: large;
+	color: #800000;
+	font-family: "Courier New";
+}
+</style>
+</head>
+
+<body style="background-image: url('light-wood-texture.jpg')">
+
+<h2 class="auto-style1">MIDTERM -JS595</h2>
+<h3 class="auto-style1">27th Oct 2012 - Saturday</h3>
+<p class="auto-style3">&nbsp;</p>
+<p class="auto-style39"><strong>Requirement:</strong></p>
+<p class="auto-style36">1) Make the window larger so that it fills a large part 
+of the screen.</p>
+<p class="MsoNormal"><span class="auto-style36">2) Add a channel for the ball to 
+enter the playing area and guides</span><br class="auto-style36" />
+<span class="auto-style36">on each side of the screen so that the area where the 
+ball can go is V shaped.</span></p>
+<p class="MsoNormal"><span class="auto-style36">3) Add a drain: a section in the 
+bottom of the window where</span><br class="auto-style36" />
+<span class="auto-style36">instead of bouncing back, the ball just exits the 
+screen.</span></p>
+<p class="auto-style36">4) Add one or more obstacles that the ball can bounce 
+off.</p>
+<p class="auto-style36">5) Add a way to inject a new ball once one exits.</p>
+<p class="MsoNormal"><span class="auto-style36">6) Add a way to control the 
+speed of the ball that is</span><br class="auto-style36" />
+<span class="auto-style36">injected in step 4.</span></p>
+<p class="auto-style36">7) Add a background image.</p>
+<p class="MsoNormal"><span class="auto-style36">8) Add sound effects when the 
+ball is injected, exits or</span><br class="auto-style36" />
+<span class="auto-style36">bounces off an obstacle. (NOT continuous sound.)</span></p>
+<p class="auto-style36">9) Add flippers to protect the ball from the drain.</p>
+<p class="MsoNormal"><span class="auto-style36">10) Use your own imagination to 
+improve the above elements</span><br class="auto-style36" />
+<span class="auto-style36">to make a better pinball application.</span></p>
+<p class="auto-style2">&nbsp;</p>
+<h2 class="auto-style1">Working Applet</h2>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<applet code="BouncingBall2.class" class="auto-style4" Archive = "midterm.jar" style="height: 520px; width: 857px" >
+</applet></p>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2 class="auto-style1">Planning Document</h2>
+<p class="auto-style35"><strong>Scope :</strong> To</p>
+<p class="auto-style36">1) Make the window larger so that it fills a large part 
+of the screen.</p>
+<p class="MsoNormal"><span class="auto-style36">2) Add a channel for the ball to 
+enter the playing area and guides</span><br class="auto-style36" />
+<span class="auto-style36">on each side of the screen so that the area where the 
+ball can go is V shaped.</span></p>
+<p class="MsoNormal"><span class="auto-style36">3) Add a drain: a section in the 
+bottom of the window where</span><br class="auto-style36" />
+<span class="auto-style36">instead of bouncing back, the ball just exits the 
+screen.</span></p>
+<p class="auto-style36">4) Add one or more obstacles that the ball can bounce 
+off.</p>
+<p class="auto-style36">5) Add a way to inject a new ball once one exits.</p>
+<p class="MsoNormal"><span class="auto-style36">6) Add a way to control the 
+speed of the ball that is</span><br class="auto-style36" />
+<span class="auto-style36">injected in step 4.</span></p>
+<p class="auto-style36">7) Add a background image.</p>
+<p class="MsoNormal"><span class="auto-style36">8) Add sound effects when the 
+ball is injected, exits or</span><br class="auto-style36" />
+<span class="auto-style36">bounces off an obstacle. (NOT continuous sound.)</span></p>
+<p class="auto-style36">9) Add flippers to protect the ball from the drain.</p>
+<p class="MsoNormal"><span class="auto-style36">10) Use own imagination to 
+improve the above elements</span><br class="auto-style36" />
+<span class="auto-style36">to make a better pinball application.</span></p>
+<p class="auto-style35">&nbsp;</p>
+<p class="auto-style7"><strong>Level</strong> : User goal</p>
+<p class="auto-style7">
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;">
+<b style="mso-bidi-font-weight:
+normal">
+Primary Actor: </b><span style="mso-bidi-font-weight:
+normal">
+User who loads the page to view the bouncing ball-pinball applet.</span></span></p>
+<p class="auto-style7">
+<b style="mso-bidi-font-weight:
+normal">
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;">
+Stakeholders and Interests: <o:p></o:p></span></b></p>
+<p class="MsoNormal">
+<span style="font-size:12.0pt;
+line-height:115%;font-family:&quot;Courier New&quot;">-<i style="mso-bidi-font-style:
+normal">Person who loads the web page</i></span></p>
+<p class="auto-style32">
+<span style="font-size:12.0pt;
+line-height:115%;font-family:&quot;Courier New&quot;">
+<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Is 
+interested to successfully load the BouncingBall-Pinball Applet.</span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight:
+normal">
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;">
+Pre-conditions:<o:p></o:p></span></b></p>
+<p class="MsoNormal">
+<span style="font-size:12.0pt;
+line-height:115%;font-family:&quot;Courier New&quot;">Internet connection is 
+established.<o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:12.0pt;
+line-height:115%;font-family:&quot;Courier New&quot;">The web page is loaded 
+successfully.<o:p></o:p></span></p>
+<p class="auto-style34">
+The applets are loaded successfully.</p>
+<p class="auto-style34">
+<strong>Success Guarantee - Post Conditions:</strong></p>
+<p class="auto-style33">
+The Bouncing Ball Applet is loaded successfully and the applet's codebase and 
+documentbase are displayed.</p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight:
+normal">
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;">
+Main Success Scenario (or Basic Flow):</span></b></p>
+<p class="MsoNormal"><![if !supportLists]>
+<span style="font-size:12.0pt;
+line-height:115%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;">
+<span style="mso-list:Ignore">1.<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span></span><![endif]>
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;">
+User clicks on the link directing to Bouncing Ball- Pinball Applet.</span></p>
+<p class="MsoNormal"><![if !supportLists]>
+<span style="font-size:12.0pt;
+line-height:115%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;">
+<span style="mso-list:Ignore">2.<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span></span><![endif]>
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;">
+The web page with the bouncing ball- pin ball opens.</span></p>
+<p class="auto-style37" style="mso-list: l0 level1 lfo1; tab-stops: 172.45pt"><![if !supportLists]>
+<span style="font-size:12.0pt;
+line-height:115%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;">
+<span style="mso-list:Ignore">3.<span style="font-style: normal; font-variant: normal; font-size: 7.0pt; line-height: normal; font-family: 'Times New Roman';">
+</span></span></span><![endif]>
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;">
+The contents of the applet are displayed to the user.</span></p>
+<p class="MsoNormal"><span style="mso-bidi-font-weight:
+normal">
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;" class="auto-style37">
+Extensions or Alternative Flows:<o:p></o:p></span></span></p>
+<p class="auto-style32" style="mso-list: l2 level1 lfo2; tab-stops: 172.45pt"><![if !supportLists]>
+<span style="font-size:12.0pt;
+line-height:115%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;">
+<span style="mso-list:Ignore">1.<span style="font-style: normal; font-variant: normal; font-size: 7.0pt; line-height: normal; font-family: 'Times New Roman';">
+</span></span></span><![endif]>
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;">
+At any time, the internet connection is lost.<o:p></o:p></span></p>
+<p class="auto-style38" style="mso-add-space: auto; mso-list: l1 level1 lfo3; tab-stops: 172.45pt">
+<![if !supportLists]>
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:
+&quot;Courier New&quot;"><span style="mso-list:Ignore">&nbsp;&nbsp;&nbsp; a.<span style="font-style: normal; font-variant: normal; font-size: 7.0pt; line-height: normal; font-family: 'Times New Roman';">
+</span></span></span><![endif]>
+<span style="font-size:12.0pt;line-height:115%;
+font-family:&quot;Courier New&quot;">Error message displayed requesting the user 
+to check his internet connection.<o:p></o:p></span></p>
+<p class="auto-style32" style="mso-list: l2 level1 lfo2; tab-stops: 172.45pt"><![if !supportLists]>
+<span style="font-size:12.0pt;
+line-height:115%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;">
+<span style="mso-list:Ignore">2.<span style="font-style: normal; font-variant: normal; font-size: 7.0pt; line-height: normal; font-family: 'Times New Roman';">
+</span></span></span><![endif]>
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;">
+The user clicks the back button before the program is loaded fully.<o:p></o:p></span></p>
+<p class="auto-style37" style="mso-add-space: auto; mso-list: l1 level1 lfo3; tab-stops: 172.45pt">
+<![if !supportLists]>
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:
+&quot;Courier New&quot;"><span style="mso-list:Ignore">&nbsp;&nbsp;&nbsp; b.<span style="font-style: normal; font-variant: normal; font-size: 7.0pt; line-height: normal; font-family: 'Times New Roman';">
+</span></span></span><![endif]>
+<span style="font-size:12.0pt;line-height:115%;
+font-family:&quot;Courier New&quot;">The program terminates and the previous web 
+page is displayed.<o:p></o:p></span></p>
+<p class="auto-style6" style="mso-add-space: auto; mso-list: l1 level1 lfo3; tab-stops: 172.45pt">
+&nbsp;</p>
+<p class="auto-style1">&nbsp;</p>
+<h2 class="auto-style1">Soure Code</h2>
+<h3 class="auto-style1">BouncingBall2.java</h3>
+<p class="MsoNormal"><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">import</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.applet.AudioClip;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">import</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.*;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">import</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.event.*;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">import</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.net.URL;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">import</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.*;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">import</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+javax.swing.*;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">import</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+javax.swing.event.*;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF">/**</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*
+</span><b><span style="font-size:10.0pt;
+font-family:Consolas;color:#7F9FBF">@author</span></b><span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"> <u>Janani</u> <u>Swaminathan</u></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*
+</span><b><span style="font-size:10.0pt;
+font-family:Consolas;color:#7F9FBF">@version</span></b><span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"> 1.0</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*
+</span><b><span style="font-size:10.0pt;
+font-family:Consolas;color:#7F9FBF">@since</span></b><span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"> 10/27/2012</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*
+</span><b><span style="font-size:10.0pt;
+font-family:Consolas;color:#7F9FBF">@param</span></b><span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"> color</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Sets the color of the ball</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*
+</span><b><span style="font-size:10.0pt;
+font-family:Consolas;color:#7F9FBF">@param</span></b><span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"> radius</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Sets the radius of the ball</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*
+</span><b><span style="font-size:10.0pt;
+font-family:Consolas;color:#7F9FBF">@param</span></b><span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"> x</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>, y indicates the position of axis / coordinates</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*
+</span><b><span style="font-size:10.0pt;
+font-family:Consolas;color:#7F9FBF">@param</span></b><span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"> image</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Image name</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*
+</span><b><span style="font-size:10.0pt;
+font-family:Consolas;color:#7F9FBF">@param</span></b><span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"> offscreen</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Refers to the Graphics</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*
+</span><b><span style="font-size:10.0pt;
+font-family:Consolas;color:#7F9FBF">@param</span></b><span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"> d</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>sets the dimension of the application area</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*
+</span><b><span style="font-size:10.0pt;
+font-family:Consolas;color:#7F9FBF">@param</span></b><span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"> Cir1X</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>, Cir1Y indicates the position of axis / coordinates for object</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Circle1</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*
+</span><b><span style="font-size:10.0pt;
+font-family:Consolas;color:#7F9FBF">@param</span></b><span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"> Cir1X1</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>, Cir1Y1 indicates the position of axis / coordinates for object</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Circle2</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*/</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">public</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+class</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+<u>BouncingBall2</u> </span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">extends</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+<u>DBAnimationApplet</u> {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">x</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">y</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">dx</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= -2, </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+dy</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = -4;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= 10;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">CirRad1</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= 30;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">Cir1X</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">Cir1Y</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Color </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+color</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = 
+Color.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">BLUE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+boolean</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+FlagDrain</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+false</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+boolean</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+FlagPlayed</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+false</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+CirRad11</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= 30;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">Cir1X1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">Cir1Y1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+boolean</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">BallOut</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+false</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">static</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+final</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+SPEED_MIN</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= 0;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">static</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+final</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+SPEED_MAX</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= 10;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">static</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+final</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+SPEED_INIT</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= 1;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+MediaTracker </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">mt</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><u>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></u></b><u><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+MediaTracker(</span></u><b><u><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">this</span></u></b><u><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span></u><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Image </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+background</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+URL </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+base</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+AudioClip </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">BouncingSound</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+AudioClip </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">DrainSound</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+AudioClip </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">InjectSound</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+JSlider </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">speedctl</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+JSlider(JSlider.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">HORIZONTAL</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">,
+</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+SPEED_MIN</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">,</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i>
+<span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">SPEED_MAX</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">,
+</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+SPEED_INIT</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Panel </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+controlPanel1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Panel </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+controlPanel2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Panel </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+controlPanel3</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Label </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+label1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+String </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+shape</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> =
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">
+"Circle"</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Choice </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+Speedlist</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Choice </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+ShapeChoice</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Button </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+injectButton</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Button(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">"Inject"</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Button </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+stopButton</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Button(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">"Stop"</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Button </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+exitButton</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Button(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">"Exit"</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Button </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+drainButton</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Button(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">"Drain"</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Button </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+startButton</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Button(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">"Continue"</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#3F5FBF">
+/**</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>* Constructor method calling the 
+super class</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>*/</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">public</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+BouncingBall2() {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">super</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">true</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#3F5FBF">
+/**</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>* Method to draw the panel and all 
+the elements of the panel This method</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>* also defines the size of the <u>
+Applet</u> layout</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>*/</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+initAnimator() {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>String att = <u>getParameter</u>(</span><span style="font-size:10.0pt;font-family:
+Consolas;color:#2A00FF">"delay"</span><span style="font-size:10.0pt;
+font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">if</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+(att != </span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">null</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><u>setDelay</u>(Integer.<i>parseInt</i>(att));</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><u>setLayout</u>(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+FlowLayout());</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+controlPanel1</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Panel();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+controlPanel2</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Panel();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+controlPanel3</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Panel();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+label1</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> =
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Label(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">"Choose 
+the speed of the ball"</span><span style="font-size:10.0pt;font-family:Consolas;
+color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><u>add</u>(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">controlPanel1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><u>add</u>(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">controlPanel2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><u>add</u>(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">controlPanel3</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+ShapeChoice</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Choice();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+ShapeChoice</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addItem(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">"Circle"</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+ShapeChoice</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addItem(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">"Square"</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+Speedlist</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Choice();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+Speedlist</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addItem(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">"1"</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+Speedlist</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addItem(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">"2"</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+Speedlist</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addItem(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">"3"</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+Speedlist</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addItem(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">"4"</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+Speedlist</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addItem(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">"5"</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+Speedlist</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addItem(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">"6"</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+Speedlist</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addItem(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">"7"</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+Speedlist</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addItem(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">"8"</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+Speedlist</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addItem(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">"9"</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+Speedlist</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addItem(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">"10"</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+controlPanel1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.add(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">injectButton</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+controlPanel2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.add(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">label1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+controlPanel2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.add(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">Speedlist</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+Speedlist</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addItemListener(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+SpeedlistHandler());</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+controlPanel1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setLayout(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+GridLayout(1, 3));</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+controlPanel2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setLayout(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+GridLayout(1, 2));</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+speedctl</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addChangeListener(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+SpeedListener());</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+injectButton</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addActionListener(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+ButtonListener(ButtonListener.</span><i><span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">INJECT</span></i><span style="font-size:
+10.0pt;font-family:Consolas;color:black">));</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = 
+10;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+x</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = <u>d</u>.width 
+* 2 / 3;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+y</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = <u>d</u>.height 
+- </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+base</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = <u>
+getCodeBase</u>();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+background</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= <u>getImage</u>(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">base</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">
+"bg.jpg"</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+mt</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addImage(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">background</span><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+1);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF">/**</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>* 
+Method to redraw the position of the ball based on its position and </span>
+<span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>* 
+to reposition based on the reflection of the wall or while dropping into the 
+hole </span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*/</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+paintFrame(Graphics g) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">
+// g.setColor(Color.white);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">
+// g.fillRect(0,0,d.width,d.height);</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>g.<u>drawImage</u>(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">background</span><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+0, 0, </span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">this</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>g.setColor(Color.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">blue</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>g.fillRect(0, 0, <u>d</u>.height, 3);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>g.fillRect(0, 0, 3, <u>d</u>.height);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>g.fillRect(<u>d</u>.width - 3, 0, 3, <u>d</u>.height);</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>g.fillRect(0, <u>d</u>.height - 3, <u>d</u>.width, 3);</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+Cir1X</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> =
+<u>d</u>.width / 3;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+Cir1Y</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> =
+<u>d</u>.height / 3;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>g.setColor(Color.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">black</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+Cir1X1</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> =
+<u>d</u>.width / 5;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+Cir1Y1</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> =
+<u>d</u>.height / 5;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>g.setColor(Color.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">green</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>g.fillOval(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">Cir1X</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+- </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+CirRad1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">Cir1Y</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+- </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+CirRad1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">CirRad1</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+* 2, </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+CirRad1</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> * 
+2);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>g.setColor(Color.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">white</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>g.fillOval(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">Cir1X1</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+- </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+CirRad11</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">Cir1Y1</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+- </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+CirRad11</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+CirRad11</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+* 2,</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+CirRad11</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+* 2);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">if</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">FlagDrain</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+== </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+false</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">) 
+{</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>g.setColor(Color.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">white</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>g.fillRect(<u>d</u>.width / 2 - 75, <u>d</u>.height - 4, 150, 4);</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">if</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+((</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">x</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+&gt; (<u>d</u>.width / 2 - 75) &amp;&amp; </span>
+<span style="font-size:10.0pt;font-family:Consolas;
+color:#0000C0">x</span><span style="font-size:10.0pt;font-family:Consolas;
+color:black"> &lt; (<u>d</u>.width / 2 + 75))</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&amp;&amp; (</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">y</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+&gt; <u>d</u>.height - </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black">)) 
+{</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+BallOut</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> =
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">true</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">if</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+(!</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">FlagPlayed</span><span style="font-size:10.0pt;font-family:Consolas;color:black">) 
+{</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+DrainSound</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.play();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+FlagPlayed</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+true</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>g.fillRect(<u>d</u>.width / 2 - 75, <u>d</u>.height - 4, 150, 4);</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>g.setColor(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">color</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">if</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">BallOut</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+== </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+false</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">) 
+{</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">if</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+(((</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">x</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+- </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">Cir1X</span><span style="font-size:10.0pt;font-family:Consolas;color:black">) 
+* (</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">x</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+- </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">Cir1X</span><span style="font-size:10.0pt;font-family:Consolas;color:black">) 
++ (</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">y</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+- </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">Cir1Y</span><span style="font-size:10.0pt;font-family:Consolas;color:black">) 
+* (</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">y</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+- </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">Cir1Y</span><span style="font-size:10.0pt;font-family:Consolas;color:black">)) 
+&lt;= ((</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">CirRad1</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
++ </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black">) * 
+(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">CirRad1</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
++ </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black">))) 
+{</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+angle_flag1, angle_flag2;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>angle_flag1 = (</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">) 
+(<u>d</u>.width / 3 - 0.7 * </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">CirRad1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>angle_flag2 = (</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">) 
+(<u>d</u>.width / 3 + 0.7 * </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">CirRad1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">if</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">x</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+&gt; angle_flag2) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+dx</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = -</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">dx</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+x</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> +=
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+/ 2;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>} </span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">else</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">if</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">x</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+&lt; angle_flag1) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+dx</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = -</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">dx</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+x</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> -=
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+/ 2;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>} </span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">else</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">if</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">y</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+&gt; </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">Cir1Y</span><span style="font-size:10.0pt;font-family:Consolas;color:black">) 
+{</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+dy</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = -</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">dy</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+y</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> +=
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+/ 2;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>} </span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">else</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+{</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+dy</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = -</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">dy</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+y</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> -=
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+/ 2;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">
+// BouncingSound.play();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">if</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+(((</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">x</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+- </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+Cir1X1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">) * 
+(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">x</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+- </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+Cir1X1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">) + 
+(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">y</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+- </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+Cir1Y1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">) * 
+(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">y</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+- </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+Cir1Y1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">)) 
+&lt;= ((</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">CirRad11</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
++ </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black">) * 
+(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">CirRad11</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
++ </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black">))) 
+{</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+angle_flag1, angle_flag2;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>angle_flag1 = (</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">) 
+(<u>d</u>.width / 5 - 0.7 * </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">CirRad1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>angle_flag2 = (</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">) 
+(<u>d</u>.width / 5 + 0.7 * </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">CirRad1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">if</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">x</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+&gt; angle_flag2) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+dx</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = -</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">dx</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+x</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> +=
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+/ 2;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>} </span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">else</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">if</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">x</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+&lt; angle_flag1) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+dx</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = -</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">dx</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+x</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> -=
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+/ 2;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>} </span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">else</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">if</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">y</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+&gt; </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">Cir1Y</span><span style="font-size:10.0pt;font-family:Consolas;color:black">) 
+{</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+dy</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = -</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">dy</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+y</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> +=
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+/ 2;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>} </span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">else</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+{</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+dy</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = -</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">dy</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+y</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> -=
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+/ 2;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">
+// BouncingSound.play();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">if</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">x</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+&lt; </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> ||
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">x</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+&gt; <u>d</u>.width - </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black">) 
+{</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+dx</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = -</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">dx</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">
+// BouncingSound.play();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">if</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">y</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+&lt; </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> ||
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">y</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+&gt; <u>d</u>.height - </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black">) 
+{</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+dy</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = -</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">dy</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">
+// BouncingSound.play();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+x</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> +=
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">dx</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+y</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> +=
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">dy</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>g.fillOval(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">x</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+- </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">y</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+- </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+* 2, </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> * 
+2);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#3F5FBF">
+/** </span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>* Method the inject back the ball 
+to the <u>palying</u> area</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>*/</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">public</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+inject() {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">if</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">BallOut</span><span style="font-size:10.0pt;font-family:Consolas;color:black">) 
+{</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = 
+10;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+x</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = <u>d</u>.width 
+* 2 / 3;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+y</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = <u>d</u>.height 
+- </span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+radius</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+dx</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = -2;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+dy</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = -4;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+FlagPlayed</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+false</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+BallOut</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> =
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+false</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+speedctl</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setValue(</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">SPEED_INIT</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+InjectSound</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.play();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">public</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+exit() {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">this</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">.<u>setVisible</u>(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">false</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF">/**</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*
+<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp; </span></span>
+<span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*
+</span><b><span style="font-size:10.0pt;
+font-family:Consolas;color:#7F9FBF">@author</span></b><span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"> <u>Janani</u> <u>Swaminathan</u></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*/</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">public</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+class</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+ButtonListener </span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">implements</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+ActionListener {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">static</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+final</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">STOP</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= 1;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">static</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+final</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+INJECT</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= 2;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">static</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+final</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">EXIT</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= 3;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">static</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+final</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+CONTINUE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= 4;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">static</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+final</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+DRAIN</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= 5;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">cmd</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">public</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+ButtonListener(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+cmd) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">this</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">.</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">cmd</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= cmd;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">public</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+actionPerformed(ActionEvent e) {</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">switch</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">cmd</span><span style="font-size:10.0pt;font-family:Consolas;color:black">) 
+{</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">case</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">STOP</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">:</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><u>stop</u>();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">break</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">case</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+INJECT</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">:</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>inject();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">break</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">case</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">EXIT</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">:</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>exit();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">break</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">case</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+CONTINUE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">:</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><u>start</u>();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">break</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">case</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+DRAIN</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">:</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+FlagDrain</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= !</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">FlagDrain</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">break</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF">/**</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*
+</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*
+</span><b><span style="font-size:10.0pt;
+font-family:Consolas;color:#7F9FBF">@author</span></b><span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"> <u>Janani</u> <u>Swaminathan</u></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*/</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+class</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+SpeedlistHandler </span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">implements</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+ItemListener {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">public</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+itemStateChanged(ItemEvent event) {</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Choice choice = (Choice) event.getSource();</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">if</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+(choice != </span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">null</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">) 
+{</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+speed1 = choice.getSelectedIndex() + 1;</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">if</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">dx</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+&lt; 0) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+dx</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = 
+-speed1 - 1;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>} </span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">else</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+{</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+dx</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = 
+speed1 + 1;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">if</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">dy</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+&lt; 0) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+dy</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = 
+-speed1 / 2 - 1;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>} </span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">else</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+{</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+dy</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = 
+speed1 / 2 + 1;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">protected</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+class</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+SpeedListener </span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">implements</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+ChangeListener {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">public</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+stateChanged(ChangeEvent e) {</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>JSlider source = (JSlider) e.getSource();</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">if</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+(!source.getValueIsAdjusting()) {</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+speed = (</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">int</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">) 
+source.getValue();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">if</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">dx</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+&lt; 0) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+dx</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = 
+-speed - 1;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>} </span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">else</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+{</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+dx</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = 
+speed + 1;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">if</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">dy</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+&lt; 0) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+dy</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = 
+-speed / 2 - 1;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>} </span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">else</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+{</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+dy</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> = 
+speed / 2 + 1;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black">}</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+<h3 class="auto-style1"><a href="BouncingBall2.html">Click here to view the 
+Javadoc</a></h3>
+<p class="auto-style1">&nbsp;</p>
+<h2 class="auto-style1">Timesheet</h2>
+	<table align="center" border="0" cellpadding="0" cellspacing="0" class="ms-grid8-main" style="border-collapse:
+ collapse;width:430pt" width="573">
+<!-- fpstyle: 23,011111100 -->
+		<colgroup>
+			<col span="1" style="mso-width-source:userset;mso-width-alt:3218;
+ " />
+			<col span="1" style="mso-width-source:userset;mso-width-alt:3218;
+ width:66pt" width="88" />
+			<col style="mso-width-source:userset;mso-width-alt:10642;width:218pt" width="291" />
+			<col style="mso-width-source:userset;mso-width-alt:3876;width:80pt" width="106" />
+		</colgroup>
+		<tr bgcolor="#0000FF" class="auto-style5" height="20" style="height:15.0pt">
+			<td class="auto-style27" height="20" width="88">&nbsp;</td>
+			<td class="auto-style27" style="width: 89px">&nbsp;</td>
+			<td class="auto-style26" width="291"><strong>Janani Swaminathan 
+			Timesheet Midterm</strong></td>
+			<td class="auto-style27" width="106">&nbsp;</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td class="auto-style27" height="20">&nbsp;</td>
+			<td class="auto-style27" style="width: 89px">&nbsp;</td>
+			<td class="auto-style27">&nbsp;</td>
+			<td class="auto-style27">&nbsp;</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td class="auto-style27" height="20"><strong>Date</strong></td>
+			<td class="auto-style27" style="width: 89px"><strong>Time</strong></td>
+			<td class="auto-style27"><strong>Task</strong></td>
+			<td><strong>Time Spent (Hrs)</strong></td>
+		</tr>
+		<tr>
+			<td class="auto-style29" style="height: 25px">27-Oct-12</td>
+			<td class="auto-style29" style="height: 25px; width: 89px">5:30 PM</td>
+			<td class="auto-style27" style="height: 25px">Analysis of the requirement</td>
+			<td class="auto-style29" style="height: 25px">0.25</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td class="auto-style29" height="20">&nbsp;</td>
+			<td class="auto-style29" style="width: 89px">&nbsp;</td>
+			<td class="auto-style27">&nbsp;</td>
+			<td class="auto-style29">&nbsp;</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td class="auto-style29" height="20">27-Oct-12</td>
+			<td class="auto-style29" style="width: 89px">5:45 PM</td>
+			<td class="auto-style27">Planning documentation</td>
+			<td class="auto-style30">0.25</td>
+		</tr>
+		<tr>
+			<td class="auto-style29" style="height: 7px"></td>
+			<td class="auto-style29" style="height: 7px; width: 89px"></td>
+			<td class="auto-style27" style="height: 7px"></td>
+		</tr>
+		<tr>
+			<td class="auto-style29" style="height: 23px">27-Oct-12</td>
+			<td class="auto-style29" style="height: 23px; width: 89px">6:45 PM</td>
+			<td class="auto-style27" style="height: 23px">Coding applet and executing it, 
+			unit tesing</td>
+			<td class="auto-style29" style="height: 23px">3.25</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td class="auto-style29" height="20">&nbsp;</td>
+			<td class="auto-style29" style="width: 89px">&nbsp;</td>
+			<td class="auto-style27">&nbsp;</td>
+			<td class="auto-style30">&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="auto-style29" style="height: 20px">27-Oct-12</td>
+			<td class="auto-style29" style="width: 89px; height: 20px">9:15 PM</td>
+			<td class="auto-style27" style="height: 20px">HTML Coding for the web page &amp; applets</td>
+			<td class="auto-style29" style="height: 20px">1</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td class="auto-style29" height="20">&nbsp;</td>
+			<td class="auto-style30" style="width: 89px">&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="auto-style29" style="height: 21px">27-Oct-12</td>
+			<td class="auto-style29" style="width: 89px; height: 21px">10:15 PM</td>
+			<td class="auto-style27" style="height: 21px">Uploading 
+			files on the<br />
+			server</td>
+			<td class="auto-style29" style="height: 21px">0.25</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td class="auto-style27" height="20">&nbsp;</td>
+			<td class="auto-style27" style="width: 89px">&nbsp;</td>
+			<td class="auto-style27">&nbsp;</td>
+			<td class="auto-style30">&nbsp;</td>
+		</tr>
+		<tr height="21" style="height:15.75pt">
+			<td class="auto-style27" height="21">&nbsp;</td>
+			<td class="auto-style27" style="width: 89px">&nbsp;</td>
+			<td class="auto-style27"><strong>Total Time Spent</strong></td>
+			<td class="auto-style29">5</td>
+		</tr>
+	</table>
+	
+<p class="auto-style3">&nbsp;</p>
+<h2 class="auto-style1">Reference</h2>
+<ul>
+	<li>
+	<p class="auto-style5"><a href="http://condor.depaul.edu/xjia/">http://condor.depaul.edu/xjia/</a></p>
+	</li>
+	<li>
+	<p class="auto-style5">&nbsp;</p>
+	</li>
+</ul>
+	
+</body>
+
+</html>

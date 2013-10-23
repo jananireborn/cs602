@@ -1,0 +1,22 @@
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jnlp spec="1.0+" codebase="file://localhost/C:\Jagath\personal\JAVA\chapter9\Backup" href="Drawingpad.jnlp">   
+
+<information>         <title>Drawing Pad</title>         <vendor>NJIT</vendor>  
+</information>   
+<resources>         <!-- Application Resources -->   
+<j2se version="1.6+"     
+<jar href="chap9.jar" main="true" />     
+</resources>     
+
+  <security> 
+      <all-permissions/> 
+  </security> 
+
+<application-desc main-class="DrawingPad"         width="800"         height="50"/>            
+ </jnlp> 
+

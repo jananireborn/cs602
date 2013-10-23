@@ -1,0 +1,994 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Chapter 7</title>
+<style type="text/css">
+.auto-style1 {
+	color: #800000;
+	text-align: center;
+}
+.auto-style2 {
+	font-family: "Courier New";
+	font-size: medium;
+}
+.auto-style3 {
+	font-family: "Courier New";
+}
+.auto-style4 {
+	font-size: medium;
+}
+.auto-style5 {
+	color: #800000;
+	text-align: left;
+}
+.auto-style7 {
+	font-family: "Courier New";
+	font-weight: bold;
+	font-size: medium;
+}
+.auto-style12 {
+	font-family: Consolas;
+	font-size: medium;
+}
+.auto-style13 {
+	font-family: "Courier New";
+	color: #800000;
+	text-align: center;
+	font-size: medium;
+}
+.auto-style15 {
+	font-size: medium;
+	font-weight: bold;
+}
+.auto-style16 {
+	margin-left: 80px;
+}
+.auto-style17 {
+	font-family: "Courier New";
+	color: #800000;
+	text-align: center;
+	font-size: medium;
+	text-decoration: underline;
+}
+.auto-style18 {
+	font-family: "Courier New";
+	text-align: center;
+}
+.auto-style19 {
+	text-align: center;
+}
+.ms-grid8-main {
+	border-left-style: none;
+	border-right: .75pt solid navy;
+	border-top: .75pt solid navy;
+	border-bottom: .75pt solid navy;
+	background-color: white;
+}
+.auto-style27 {
+	color: black;
+	font-size: 11.0pt;
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: none;
+	font-family: Calibri, sans-serif;
+	text-align: general;
+	vertical-align: bottom;
+	white-space: nowrap;
+	border-style: none;
+	border-color: inherit;
+	border-width: medium;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+}
+td
+	{border-style: none;
+	border-color: inherit;
+	border-width: medium;
+	padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Calibri, sans-serif;
+	text-align:general;
+	vertical-align:bottom;
+	white-space:nowrap;
+	}
+.auto-style26 {
+	color: white;
+}
+.auto-style29 {
+	color: black;
+	font-size: 11.0pt;
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: none;
+	font-family: Calibri, sans-serif;
+	text-align: center;
+	vertical-align: bottom;
+	white-space: nowrap;
+	border-style: none;
+	border-color: inherit;
+	border-width: medium;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+}
+.auto-style30 {
+	text-align: center;
+}
+.auto-style32 {
+	line-height: 150%;
+	text-align: left;
+}
+.auto-style37 {
+	text-align: left;
+	font-family: "Courier New";
+	color: #000000;
+}
+.auto-style6 {
+	text-align: left;
+	font-family: "Courier New";
+	line-height: 150%;
+	font-size: 12pt;
+	color: #000000;
+}
+.auto-style34 {
+	color: #800000;
+	text-align: left;
+}
+.auto-style36 {
+	color: #000000;
+}
+.auto-style38 {
+	font-family: "Courier New";
+	font-size: medium;
+	line-height: 150%;
+}
+.auto-style42 {
+	font-family: "Courier New";
+	font-weight: normal;
+	font-size: medium;
+	line-height: 150%;
+	color: #000000;
+}
+.auto-style43 {
+	color: #000000;
+	text-align: left;
+}
+.auto-style44 {
+	font-family: "Courier New";
+	font-weight: normal;
+	font-size: medium;
+	color: #000000;
+}
+.auto-style45 {
+	font-family: Consolas;
+	color: black;
+	font-size: medium;
+}
+</style>
+</head>
+
+<body style="background-image: url('light-wood-texture.jpg')">
+
+<h2 class="auto-style1">Chapter 7</h2>
+<h3 class="auto-style1">Week 7 (17 - Oct - 2012 to 23 - Oct - 2012)</h3>
+<h2 class="auto-style1">Working Applet</h2>
+<p class="auto-style1">&nbsp;</p>
+<title>The Sorting Algorithm Demo 3</title>
+<hr>
+
+<pre>
+<span class="auto-style2"><strong>        Bubble Sort</strong></span>			       <strong><span class="auto-style2">     Bubble Sort</span></strong><span class="auto-style2">  </span>  			<span class="auto-style3"><strong><span class="auto-style4">     Quick Sort</span></strong><span class="auto-style4">  </span></span> 
+
+<applet code=Sort3.class width=300 archive = "sort.jar" style="height: 131px" ><param name="alg"  value="BubbleSort"><param name="dis" value="horizontal"></applet>     <applet
+code=Sort3.class archive = "sort.jar" width=300 style="height: 128px"><param name="alg" value="BubbleSort"><param name="dis" value="vertical"></applet>     <applet
+code=Sort3.class archive = "sort.jar" width=300 style="height: 130px"><param name="alg" value="QuickSort"><param name="dis" value="bottom">  </applet>
+
+<span class="auto-style3"><strong><span class="auto-style4">       Insertion Sort</span></strong><span class="auto-style4">			 </span><strong><span class="auto-style4">Selection Sort</span></strong></span>
+
+ <applet code=Sort3.class width=300 archive = "sort.jar" style="height: 136px" ><param name="alg" value="InsertionSort"><param name="dis" value="bar"></applet> <applet
+   code=Sort3.class width=300 archive = "sort.jar" style="height: 137px" ><param name="alg" value="MergeSort"><param name="dis" value="bottom"></applet>
+</pre>
+
+<hr>
+
+
+
+<p>&nbsp;</p>
+<h2 class="auto-style1">Planning Document</h2>
+<p class="auto-style44"><strong>Scope: (Ex. 7.6) : </strong>To enhance the 
+latest version of the animation applet Sort3 by adding the following 
+capabilities:</p>
+<p class="auto-style44">(a) New sorting algorithms such as insertion sort.</p>
+<p class="auto-style44">(b) New display strategies.</p>
+	<p class="auto-style42"><strong>Level</strong> : User goal</p>
+<p class="auto-style38">
+<span class="auto-style36">
+<b style="mso-bidi-font-weight:
+normal">
+Primary Actor: </b></span>
+<span style="mso-bidi-font-weight:
+normal" class="auto-style36">
+User who loads the page to view the sort applet.</span></p>
+<p class="auto-style43"><b style="mso-bidi-font-weight:
+normal">
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;">
+Stakeholders and Interests: <o:p></o:p></span></b></p>
+<p class="auto-style5">
+<span style="font-size:12.0pt;
+line-height:115%;font-family:&quot;Courier New&quot;">-<span class="auto-style36"><i style="mso-bidi-font-style:
+normal">Person who loads the web page</i></span></span></p>
+<p class="auto-style32">
+<span style="font-size:12.0pt;
+line-height:115%;font-family:&quot;Courier New&quot;">
+<span style="mso-spacerun:yes" class="auto-style36">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+<span class="auto-style36">Is interested to successfully load the Sort Applet</span></span></p>
+<p class="auto-style43"><b style="mso-bidi-font-weight:
+normal">
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;">
+Pre-conditions:<o:p></o:p></span></b></p>
+<p class="auto-style43">
+<span style="font-size:12.0pt;
+line-height:115%;font-family:&quot;Courier New&quot;">Internet connection is 
+established.<o:p></o:p></span></p>
+<p class="auto-style43">
+<span style="font-size:12.0pt;
+line-height:115%;font-family:&quot;Courier New&quot;">The web page is loaded 
+successfully.<o:p></o:p></span></p>
+<p class="auto-style37">
+The applet is loaded successfully.</p>
+<p class="auto-style37">
+<strong>Success Guarantee - Post Conditions:</strong></p>
+<p class="auto-style6">
+The Sort Applet is loaded successfully and the user is able to view the various 
+sort applets visually.</p>
+<p class="auto-style43"><b style="mso-bidi-font-weight:
+normal">
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;">
+Main Success Scenario (or Basic Flow):</span></b></p>
+<p class="auto-style43"><![if !supportLists]>
+<span style="font-size:12.0pt;
+line-height:115%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;">
+<span style="mso-list:Ignore">1.<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span></span><![endif]>
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;">
+User clicks on the link directing to the Sort Applet.</span></p>
+<p class="auto-style43"><![if !supportLists]>
+<span style="font-size:12.0pt;
+line-height:115%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;">
+<span style="mso-list:Ignore">2.<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span></span><![endif]>
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;">
+The web page with the applet opens.</span></p>
+<p class="auto-style32" style="mso-list: l0 level1 lfo1; tab-stops: 172.45pt"><![if !supportLists]>
+<span style="font-size:12.0pt;
+line-height:115%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;">
+<span style="mso-list:Ignore"><span class="auto-style36">3.</span><span style="font:7.0pt &quot;Times New Roman&quot;" class="auto-style36">
+</span></span></span><![endif]>
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;" class="auto-style36">
+The contents of the applet are displayed.</span></p>
+<p class="auto-style43"><b style="mso-bidi-font-weight:
+normal">
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;">
+Extensions or Alternative Flows:<o:p></o:p></span></b></p>
+<p class="auto-style43" style="mso-list: l2 level1 lfo2; tab-stops: 172.45pt"><![if !supportLists]>
+<span style="font-size:12.0pt;
+line-height:115%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;">
+<span style="mso-list:Ignore">1.<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span></span><![endif]>
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;">
+At any time, the internet connection is lost.<o:p></o:p></span></p>
+<p class="auto-style34" style="mso-add-space: auto; mso-list: l1 level1 lfo3; tab-stops: 172.45pt">
+<![if !supportLists]>
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:
+&quot;Courier New&quot;"><span style="mso-list:Ignore">
+<span class="auto-style36">&nbsp;&nbsp;&nbsp; 
+a.<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span></span></span><span class="auto-style36"><![endif]>
+</span>
+<span style="font-size:12.0pt;line-height:115%;
+font-family:&quot;Courier New&quot;"><span class="auto-style36">Error message displayed requesting the user 
+to check his internet connection.</span><o:p></o:p></span></p>
+<p class="auto-style5" style="mso-list: l2 level1 lfo2; tab-stops: 172.45pt"><![if !supportLists]>
+<span style="font-size:12.0pt;
+line-height:115%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;">
+<span style="mso-list:Ignore"><span class="auto-style36">2.</span><span style="font:7.0pt &quot;Times New Roman&quot;" class="auto-style36">
+</span></span></span><![endif]>
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;" class="auto-style36">
+The user clicks the back button before the program is loaded fully.<o:p></o:p></span></p>
+<p class="auto-style43" style="mso-add-space: auto; mso-list: l1 level1 lfo3; tab-stops: 172.45pt">
+<![if !supportLists]>
+<span style="font-size:12.0pt;line-height:115%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:
+&quot;Courier New&quot;"><span style="mso-list:Ignore">&nbsp;&nbsp;&nbsp; b.<span style="font:7.0pt &quot;Times New Roman&quot;">
+</span></span></span><![endif]>
+<span style="font-size:12.0pt;line-height:115%;
+font-family:&quot;Courier New&quot;">The program terminates and the previous web 
+page is displayed.<o:p></o:p></span></p>
+<p class="auto-style6" style="mso-add-space: auto; mso-list: l1 level1 lfo3; tab-stops: 172.45pt">
+&nbsp;</p>
+<h2 class="auto-style1">Communication Diagram</h2>
+	<p class="auto-style5">&nbsp;</p>
+<h2 class="auto-style1">
+<img alt=" " height="1338" src="diagram.jpg" width="1372" /></h2>
+<h2 class="auto-style1">Source Code</h2>
+<p class="auto-style17"><strong>Bar Sort Display</strong></p>
+<p class="MsoNormal"><span class="auto-style7" style="color: #7F0055">import</span><span class="auto-style2" style="color: black"> 
+java.awt.*;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style7" style="color: #7F0055">public</span><span class="auto-style2" style="color: black">
+</span><span class="auto-style7" style="color: #7F0055">class</span><span class="auto-style2" style="color: black"> 
+BarSortDisplay </span><span class="auto-style7" style="color: #7F0055">
+implements</span><span class="auto-style2" style="color: black"> SortDisplay {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: #3F5FBF">/**</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: #3F5FBF">Method to 
+define the size of the array</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style7" style="color: #7F9FBF">@param</span><span class="auto-style2" style="color: #3F5FBF"> 
+d Dimensions of the applet</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: #3F5FBF">*/</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: black">
+<span style="mso-spacerun:yes">&nbsp; </span></span>
+<span class="auto-style7" style="color: #7F0055">public</span><span class="auto-style2" style="color: black">
+</span><span class="auto-style7" style="color: #7F0055">int</span><span class="auto-style2" style="color: black"> 
+getArraySize(Dimension d) {</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: black">
+<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span>
+<span class="auto-style7" style="color: #7F0055">return</span><span class="auto-style2" style="color: black"> 
+d.width / 4; </span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal"><span class="auto-style4" style="color: black">
+<span class="auto-style3" style="mso-spacerun:yes">&nbsp; </span></span>
+<span class="auto-style2" style="color: black">}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="auto-style2"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: #3F5FBF">/**</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: #3F5FBF">Method to 
+display the Sorting items, a real time graphic update with delay set in the
+</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: #3F5FBF">main 
+program</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="auto-style2"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><span class="auto-style7" style="color: #7F9FBF">@param</span><span class="auto-style2" style="color: #3F5FBF"> 
+a Integer array to be sorted </span>
+<span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style7" style="color: #7F9FBF">@param</span><span class="auto-style2" style="color: #3F5FBF"> 
+g Type graphics for display the array output</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style7" style="color: #7F9FBF">@param</span><span class="auto-style2" style="color: #3F5FBF"> 
+d Define and dimensions of the rectangle </span>
+<span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="auto-style2"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: #3F5FBF">*/</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: black">
+<span style="mso-spacerun:yes">&nbsp; </span></span>
+<span class="auto-style7" style="color: #7F0055">public</span><span class="auto-style2" style="color: black">
+</span><span class="auto-style7" style="color: #7F0055">void</span><span class="auto-style2" style="color: black"> 
+display(</span><span class="auto-style7" style="color: #7F0055">int</span><span class="auto-style2" style="color: black"> 
+a[], Graphics g, Dimension d) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style4" style="color: black">
+<span class="auto-style3" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>
+</span><span class="auto-style2" style="color: black">g.setColor(Color.white);</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style4" style="color: black">
+<span class="auto-style3" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>
+</span><span class="auto-style2" style="color: black">g.fillRect(0, 0, d.width, 
+d.height);</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: black">
+<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span>
+<span class="auto-style7" style="color: #7F0055">double</span><span class="auto-style2" style="color: black"> 
+f = d.height / (</span><span class="auto-style7" style="color: #7F0055">double</span><span class="auto-style2" style="color: black">) 
+a.length;<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span>
+<span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: black">
+<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span>
+<span class="auto-style7" style="color: #7F0055">double</span><span class="auto-style2" style="color: black"> 
+cf = 255.0 / (</span><span class="auto-style7" style="color: #7F0055">double</span><span class="auto-style2" style="color: black">) 
+a.length;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: black">
+<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span>
+<span class="auto-style7" style="color: #7F0055">int</span><span class="auto-style2" style="color: black"> 
+x = d.width - 3;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: black">
+<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span>
+<span class="auto-style7" style="color: #7F0055">for</span><span class="auto-style2" style="color: black"> 
+(</span><span class="auto-style7" style="color: #7F0055">int</span><span class="auto-style2" style="color: black"> 
+i = a.length; --i &gt;= 0; x -= 3) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style4" style="color: black">
+<span class="auto-style3" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style2" style="color: black">g.setColor(</span><span class="auto-style7" style="color: #7F0055">new</span><span class="auto-style2" style="color: black"> 
+Color((</span><span class="auto-style7" style="color: #7F0055">int</span><span class="auto-style2" style="color: black">)(a[i] 
+* cf / 1.5), (</span><span class="auto-style7" style="color: #7F0055">int</span><span class="auto-style2" style="color: black">)(a[i] 
+* cf), 0));</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style4" style="color: black">
+<span class="auto-style3" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style2" style="color: black">g.fillRect(x, 
+d.height - (</span><span class="auto-style7" style="color: #7F0055">int</span><span class="auto-style2" style="color: black">)(a[i] 
+* f), 3, (</span><span class="auto-style7" style="color: #7F0055">int</span><span class="auto-style2" style="color: black">)(a[i] 
+* f));</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style4" style="color: black">
+<span class="auto-style3" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>
+</span><span class="auto-style2" style="color: black">}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: black">
+<span style="mso-spacerun:yes">&nbsp; </span>}<span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span></span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: black">}</span><o:p></o:p></p>
+<p class="auto-style18">
+<o:p><a href="sort%20programs/resources/BarSortDisplay.html">Click Here to view 
+the JAVADOC for Bar Sort Display</a></o:p></p>
+<p class="auto-style18">
+<o:p></o:p>
+</p>
+<p class="auto-style17">
+<o:p><strong>Bar Sort Display 1</strong></o:p></p>
+<p class="MsoNormal"><span class="auto-style7" style="color: #7F0055">import</span><span class="auto-style2" style="color: black"> 
+java.awt.*;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: #3F5FBF">/**</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style4" style="color: #3F5FBF">
+<span class="auto-style3" style="mso-spacerun:yes">&nbsp;</span></span><span class="auto-style2" style="color: #3F5FBF">*
+</span><span class="auto-style7" style="color: #7F9FBF">@author</span><span class="auto-style4" style="color: #3F5FBF"><span class="auto-style3" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style2" style="color: #3F5FBF">Janani 
+Swaminathan </span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style4" style="color: #3F5FBF">
+<span class="auto-style3" style="mso-spacerun:yes">&nbsp;</span></span><span class="auto-style2" style="color: #3F5FBF">*
+</span><span class="auto-style7" style="color: #7F9FBF">@version</span><span class="auto-style4" style="color: #3F5FBF"><span class="auto-style3" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style2" style="color: #3F5FBF">1.0<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal"><span class="auto-style4" style="color: #3F5FBF">
+<span class="auto-style3" style="mso-spacerun:yes">&nbsp;</span></span><span class="auto-style2" style="color: #3F5FBF">*
+</span><span class="auto-style7" style="color: #7F9FBF">@since</span><span class="auto-style4" style="color: #3F5FBF"><span class="auto-style3" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style2" style="color: #3F5FBF">10/23/2012<span style="mso-spacerun:yes">&nbsp;
+</span></span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style4" style="color: #3F5FBF">
+<span class="auto-style3" style="mso-spacerun:yes">&nbsp;</span></span><span class="auto-style2" style="color: #3F5FBF">*/</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style7" style="color: #7F0055">public</span><span class="auto-style2" style="color: black">
+</span><span class="auto-style7" style="color: #7F0055">class</span><span class="auto-style2" style="color: black"> 
+BarSortDisplay1 </span><span class="auto-style7" style="color: #7F0055">
+implements</span><span class="auto-style2" style="color: black"> SortDisplay {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="auto-style2"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: #3F5FBF">/**</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: #3F5FBF">Method to 
+define the size of the array</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style7" style="color: #7F9FBF">@param</span><span class="auto-style2" style="color: #3F5FBF"> 
+d Dimensions of the applet</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: #3F5FBF">*/</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: black">
+<span style="mso-spacerun:yes">&nbsp; </span></span>
+<span class="auto-style7" style="color: #7F0055">public</span><span class="auto-style2" style="color: black">
+</span><span class="auto-style7" style="color: #7F0055">int</span><span class="auto-style2" style="color: black"> 
+getArraySize(Dimension d) {</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: black">
+<span style="mso-spacerun:yes">&nbsp;&nbsp; &nbsp;</span></span><span class="auto-style7" style="color: #7F0055">return</span><span class="auto-style2" style="color: black"> 
+d.width / 3; </span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal"><span class="auto-style4" style="color: black">
+<span class="auto-style3" style="mso-spacerun:yes">&nbsp; </span></span>
+<span class="auto-style2" style="color: black">}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="auto-style2"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: #3F5FBF">/**</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: #3F5FBF">Method to 
+display the Sorting items, a real time graphic update with delay set in the
+</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: #3F5FBF">main 
+program</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="auto-style2"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><span class="auto-style7" style="color: #7F9FBF">@param</span><span class="auto-style2" style="color: #3F5FBF"> 
+a Integer array to be sorted </span>
+<span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style7" style="color: #7F9FBF">@param</span><span class="auto-style2" style="color: #3F5FBF"> 
+g Type graphics for display the array output</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style7" style="color: #7F9FBF">@param</span><span class="auto-style2" style="color: #3F5FBF"> 
+d Define and dimensions of the rectangle </span>
+<span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="auto-style2"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: #3F5FBF">*/</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: black">
+<span style="mso-spacerun:yes">&nbsp; </span></span>
+<span class="auto-style7" style="color: #7F0055">public</span><span class="auto-style2" style="color: black">
+</span><span class="auto-style7" style="color: #7F0055">void</span><span class="auto-style2" style="color: black"> 
+display(</span><span class="auto-style7" style="color: #7F0055">int</span><span class="auto-style2" style="color: black"> 
+a[], Graphics g, Dimension d) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style4" style="color: black">
+<span class="auto-style3" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>
+</span><span class="auto-style2" style="color: black">g.setColor(Color.white);</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style4" style="color: black">
+<span class="auto-style3" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>
+</span><span class="auto-style2" style="color: black">g.fillRect(0, 0, d.width, 
+d.height);</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: black">
+<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span>
+<span class="auto-style7" style="color: #7F0055">double</span><span class="auto-style2" style="color: black"> 
+f = d.height / (</span><span class="auto-style7" style="color: #7F0055">double</span><span class="auto-style2" style="color: black">) 
+a.length;<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span>
+<span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: black">
+<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span>
+<span class="auto-style7" style="color: #7F0055">double</span><span class="auto-style2" style="color: black"> 
+cf = 255.0 / (</span><span class="auto-style7" style="color: #7F0055">double</span><span class="auto-style2" style="color: black">) 
+a.length;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="auto-style2"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: black">
+<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span>
+<span class="auto-style7" style="color: #7F0055">int</span><span class="auto-style2" style="color: black"> 
+x = d.width - 3;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: black">
+<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span>
+<span class="auto-style7" style="color: #7F0055">for</span><span class="auto-style2" style="color: black"> 
+(</span><span class="auto-style7" style="color: #7F0055">int</span><span class="auto-style2" style="color: black"> 
+i = a.length; --i &gt;= 0; x -= 3) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style4" style="color: black">
+<span class="auto-style3" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style2" style="color: black">g.setColor(</span><span class="auto-style7" style="color: #7F0055">new</span><span class="auto-style2" style="color: black"> 
+Color(1, (</span><span class="auto-style7" style="color: #7F0055">int</span><span class="auto-style2" style="color: black">)(a[i] 
+* cf / 1.5), (</span><span class="auto-style7" style="color: #7F0055">int</span><span class="auto-style2" style="color: black">)(a[i] 
+* cf)));</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style4" style="color: black">
+<span class="auto-style3" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class="auto-style2" style="color: black">g.fillRect(x, 3 , 
+d.height - (</span><span class="auto-style7" style="color: #7F0055">int</span><span class="auto-style2" style="color: black">)(a[i] 
+* f), (</span><span class="auto-style7" style="color: #7F0055">int</span><span class="auto-style2" style="color: black">)(a[i] 
+* f));</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style4" style="color: black">
+<span class="auto-style3" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>
+</span><span class="auto-style2" style="color: black">}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: black">
+<span style="mso-spacerun:yes">&nbsp; </span>}<span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span></span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span class="auto-style2" style="color: black">}</span><o:p></o:p></p>
+<p class="auto-style18">
+<o:p>
+<o:p><a href="sort%20programs/resources/BarSortDisplay1.html">Click Here to view 
+the JAVADOC for Bar Sort Display 1</a></o:p></o:p></p>
+<p class="auto-style13">
+<o:p></o:p>
+</p>
+<p class="auto-style17">
+<o:p><strong>Insertion Sort Algorithm</strong></o:p></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: #3F5FBF">/**</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-family: Consolas; color: #3F5FBF">
+<span class="auto-style4" style="mso-spacerun:yes">&nbsp;</span></span><span class="auto-style4" style="font-family: Consolas; color: #3F5FBF">*
+</span><span class="auto-style15" style="font-family: Consolas; color: #7F9FBF">
+@author</span><span style="font-family: Consolas; color: #3F5FBF"><span class="auto-style4" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>
+<span class="auto-style4" style="font-family: Consolas; color: #3F5FBF">Janani 
+Swaminathan </span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-family: Consolas; color: #3F5FBF">
+<span class="auto-style4" style="mso-spacerun:yes">&nbsp;</span></span><span class="auto-style4" style="font-family: Consolas; color: #3F5FBF">*
+</span><span class="auto-style15" style="font-family: Consolas; color: #7F9FBF">
+@version</span><span style="font-family: Consolas; color: #3F5FBF"><span class="auto-style4" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>
+<span class="auto-style4" style="font-family: Consolas; color: #3F5FBF">1.0<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal"><span style="font-family: Consolas; color: #3F5FBF">
+<span class="auto-style4" style="mso-spacerun:yes">&nbsp;</span></span><span class="auto-style4" style="font-family: Consolas; color: #3F5FBF">*
+</span><span class="auto-style15" style="font-family: Consolas; color: #7F9FBF">
+@since</span><span style="font-family: Consolas; color: #3F5FBF"><span class="auto-style4" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>
+<span class="auto-style4" style="font-family: Consolas; color: #3F5FBF">
+10/23/2012<span style="mso-spacerun:yes">&nbsp; </span></span>
+<span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-family: Consolas; color: #3F5FBF">
+<span class="auto-style4" style="mso-spacerun:yes">&nbsp;</span></span><span class="auto-style4" style="font-family: Consolas; color: #3F5FBF">*/</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="auto-style12"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal">
+<span class="auto-style15" style="font-family: Consolas; color: #7F0055">public</span><span class="auto-style4" style="font-family: Consolas; color: black">
+</span><span class="auto-style15" style="font-family: Consolas; color: #7F0055">
+class</span><span class="auto-style4" style="font-family: Consolas; color: black"> 
+InsertionSortAlgorithm </span>
+<span class="auto-style15" style="font-family: Consolas; color: #7F0055">extends</span><span class="auto-style4" style="font-family: Consolas; color: black"> 
+SortAlgorithm {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: black">
+<span style="mso-spacerun:yes">&nbsp; </span></span>
+<span class="auto-style15" style="font-family: Consolas; color: #7F0055">public</span><span class="auto-style4" style="font-family: Consolas; color: black"> 
+InsertionSortAlgorithm(AlgorithmAnimator animator) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: black">
+<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span>
+<span class="auto-style15" style="font-family: Consolas; color: #7F0055">super</span><span class="auto-style4" style="font-family: Consolas; color: black">(animator);
+</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span>
+</p>
+<p class="MsoNormal"><span style="font-family: Consolas; color: black">
+<span class="auto-style4" style="mso-spacerun:yes">&nbsp; </span></span>
+<span class="auto-style4" style="font-family: Consolas; color: black">}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="auto-style12"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: #3F5FBF">/**</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: #3F5FBF">Sorting 
+logic using the Insertion Sort Algorithm</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="auto-style12"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal">
+<span class="auto-style15" style="font-family: Consolas; color: #7F9FBF">@param</span><span class="auto-style4" style="font-family: Consolas; color: #3F5FBF"> 
+a[] array to be sorted using insertion sort</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style15" style="font-family: Consolas; color: #7F9FBF">@param</span><span class="auto-style4" style="font-family: Consolas; color: #3F5FBF"> 
+i integer for holding the array position</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style15" style="font-family: Consolas; color: #7F9FBF">@param</span><span class="auto-style4" style="font-family: Consolas; color: #3F5FBF"> 
+j integer for holding the array position</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="auto-style12"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: #3F5FBF">*/</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: black">
+<span style="mso-spacerun:yes">&nbsp; </span></span>
+<span class="auto-style15" style="font-family: Consolas; color: #7F0055">void</span><span class="auto-style4" style="font-family: Consolas; color: black"> 
+sort(</span><span class="auto-style15" style="font-family: Consolas; color: #7F0055">int</span><span class="auto-style4" style="font-family: Consolas; color: black"> 
+a[]) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: black">
+<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span>
+<span class="auto-style15" style="font-family: Consolas; color: #7F0055">for</span><span class="auto-style4" style="font-family: Consolas; color: black"> 
+(</span><span class="auto-style15" style="font-family: Consolas; color: #7F0055">int</span><span class="auto-style4" style="font-family: Consolas; color: black"> 
+i = 0; i &lt; a.length-1; i++)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: black">
+<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>
+<span class="auto-style15" style="font-family: Consolas; color: #7F0055">for</span><span class="auto-style4" style="font-family: Consolas; color: black"> 
+(</span><span class="auto-style15" style="font-family: Consolas; color: #7F0055">int</span><span class="auto-style4" style="font-family: Consolas; color: black"> 
+j = i + 1; j &gt; 0 ; j--) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: black">
+<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+</span><span class="auto-style15" style="font-family: Consolas; color: #7F0055">
+if</span><span class="auto-style4" style="font-family: Consolas; color: black"> 
+(a[j] &lt; a[j-1])</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-family: Consolas; color: black">
+<span class="auto-style4" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>
+<span class="auto-style4" style="font-family: Consolas; color: black">swap(a, j, 
+j-1);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-family: Consolas; color: black">
+<span class="auto-style4" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>
+<span class="auto-style4" style="font-family: Consolas; color: black">pause();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-family: Consolas; color: black">
+<span class="auto-style4" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>
+<span class="auto-style4" style="font-family: Consolas; color: black">}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-family: Consolas; color: black">
+<span class="auto-style4" style="mso-spacerun:yes">&nbsp; </span></span>
+<span class="auto-style4" style="font-family: Consolas; color: black">}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="line-height: 115%; font-family: Consolas; color: black">
+}</span><o:p></o:p></p>
+<p class="auto-style13">
+<o:p>
+<o:p><a href="sort%20programs/resources/InsertionSortAlgorithm.html">Click Here 
+to view the JAVADOC for Insertion Sort Display</a></o:p></o:p></p>
+<p class="auto-style13">
+<o:p>
+<o:p></o:p>
+</o:p>
+</p>
+<p class="auto-style17">
+<o:p><strong>Selection Sort Algorithm</strong></o:p></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: #3F5FBF">/**</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-family: Consolas; color: #3F5FBF">
+<span class="auto-style4" style="mso-spacerun:yes">&nbsp;</span></span><span class="auto-style4" style="font-family: Consolas; color: #3F5FBF">*
+</span><span class="auto-style15" style="font-family: Consolas; color: #7F9FBF">
+@author</span><span style="font-family: Consolas; color: #3F5FBF"><span class="auto-style4" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>
+<span class="auto-style4" style="font-family: Consolas; color: #3F5FBF">Janani 
+Swaminathan </span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-family: Consolas; color: #3F5FBF">
+<span class="auto-style4" style="mso-spacerun:yes">&nbsp;</span></span><span class="auto-style4" style="font-family: Consolas; color: #3F5FBF">*
+</span><span class="auto-style15" style="font-family: Consolas; color: #7F9FBF">
+@version</span><span style="font-family: Consolas; color: #3F5FBF"><span class="auto-style4" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>
+<span class="auto-style4" style="font-family: Consolas; color: #3F5FBF">1.0<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal"><span style="font-family: Consolas; color: #3F5FBF">
+<span class="auto-style4" style="mso-spacerun:yes">&nbsp;</span></span><span class="auto-style4" style="font-family: Consolas; color: #3F5FBF">*
+</span><span class="auto-style15" style="font-family: Consolas; color: #7F9FBF">
+@since</span><span style="font-family: Consolas; color: #3F5FBF"><span class="auto-style4" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>
+<span class="auto-style4" style="font-family: Consolas; color: #3F5FBF">
+10/23/2012<span style="mso-spacerun:yes">&nbsp; </span></span>
+<span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-family: Consolas; color: #3F5FBF">
+<span class="auto-style4" style="mso-spacerun:yes">&nbsp;</span></span><span class="auto-style4" style="font-family: Consolas; color: #3F5FBF">*/</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style15" style="font-family: Consolas; color: #7F0055">public</span><span class="auto-style4" style="font-family: Consolas; color: black">
+</span><span class="auto-style15" style="font-family: Consolas; color: #7F0055">
+class</span><span class="auto-style4" style="font-family: Consolas; color: black"> 
+SelectionSortAlgorithm </span>
+<span class="auto-style15" style="font-family: Consolas; color: #7F0055">extends</span><span class="auto-style4" style="font-family: Consolas; color: black"> 
+SortAlgorithm {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: black">
+<span style="mso-spacerun:yes">&nbsp; </span></span>
+<span class="auto-style15" style="font-family: Consolas; color: #7F0055">public</span><span class="auto-style4" style="font-family: Consolas; color: black"> 
+SelectionSortAlgorithm(AlgorithmAnimator animator) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: black">
+<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span>
+<span class="auto-style15" style="font-family: Consolas; color: #7F0055">super</span><span class="auto-style4" style="font-family: Consolas; color: black">(animator);
+</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span>
+</p>
+<p class="MsoNormal"><span style="font-family: Consolas; color: black">
+<span class="auto-style4" style="mso-spacerun:yes">&nbsp; </span></span>
+<span class="auto-style4" style="font-family: Consolas; color: black">}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="auto-style12"><o:p>&nbsp;</o:p></p>
+<p class="auto-style12"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: #3F5FBF">/**</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: #3F5FBF">Sorting 
+logic using the Selection Sort Algorithm</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="auto-style12"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal">
+<span class="auto-style15" style="font-family: Consolas; color: #7F9FBF">@param</span><span class="auto-style4" style="font-family: Consolas; color: #3F5FBF"> 
+a[] array to be sorted using insertion sort</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style15" style="font-family: Consolas; color: #7F9FBF">@param</span><span class="auto-style4" style="font-family: Consolas; color: #3F5FBF"> 
+i integer for holding the array position</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style15" style="font-family: Consolas; color: #7F9FBF">@param</span><span class="auto-style4" style="font-family: Consolas; color: #3F5FBF"> 
+j integer for holding the array position</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style15" style="font-family: Consolas; color: #7F9FBF">@param</span><span class="auto-style4" style="font-family: Consolas; color: #3F5FBF"> 
+min interger for holding the minimum value</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: #3F5FBF">*/</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: black">
+<span style="mso-spacerun:yes">&nbsp; </span></span>
+<span class="auto-style15" style="font-family: Consolas; color: #7F0055">void</span><span class="auto-style4" style="font-family: Consolas; color: black"> 
+sort(</span><span class="auto-style15" style="font-family: Consolas; color: #7F0055">int</span><span class="auto-style4" style="font-family: Consolas; color: black"> 
+a[]) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: black">
+<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span></span>
+<span class="auto-style15" style="font-family: Consolas; color: #7F0055">int</span><span class="auto-style4" style="font-family: Consolas; color: black"> 
+i, j, min;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="auto-style12"><o:p>&nbsp;</o:p><span class="auto-style4" style="font-family: Consolas; color: black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>
+<span class="auto-style15" style="font-family: Consolas; color: #7F0055">for</span><span class="auto-style4" style="font-family: Consolas; color: black"> 
+(i =0; i&lt; a.length; i++) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: black">
+<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>
+<span class="auto-style15" style="font-family: Consolas; color: #7F0055">for</span><span class="auto-style4" style="font-family: Consolas; color: black"> 
+(j = i+1; j&lt;a.length; j++)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: black">
+<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>{<span style="mso-spacerun:yes">&nbsp;
+</span></span>
+<span class="auto-style15" style="font-family: Consolas; color: #7F0055">if</span><span class="auto-style4" style="font-family: Consolas; color: black"> 
+(a[j] &lt; a[i])</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-family: Consolas; color: black">
+<span class="auto-style4" style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>
+<span class="auto-style4" style="font-family: Consolas; color: black">{</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: black">
+<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>swap(a,i,j);</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: black">
+<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>pause();</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="auto-style45"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>} </p>
+<p class="auto-style16">
+<span class="auto-style4" style="font-family: Consolas; color: black">}<span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span></span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span class="auto-style4" style="font-family: Consolas; color: black">
+<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>}<span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span></span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-family: Consolas; color: black">
+<span class="auto-style4" style="mso-spacerun:yes">&nbsp; </span></span>
+<span class="auto-style4" style="font-family: Consolas; color: black">}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">}</p>
+<p class="auto-style19">
+<a href="sort%20programs/resources/SelectionSortAlgorithm.html">
+<span class="auto-style4" style="font-family: Consolas"><o:p>&nbsp;</span><span class="auto-style2"><o:p>Click 
+Here to view the JAVADOC for Selection Sort Display</span></a></o:p></o:p></p>
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+<h2 class="auto-style1">
+<o:p><strong>Timesheet</strong></o:p></h2>
+	<table align="center" border="0" cellpadding="0" cellspacing="0" class="ms-grid8-main" style="border-collapse:
+ collapse;width:430pt" width="573">
+<!-- fpstyle: 23,011111100 -->
+		<colgroup>
+			<col span="2" style="mso-width-source:userset;mso-width-alt:3218;
+ width:66pt" width="88" />
+			<col style="mso-width-source:userset;mso-width-alt:10642;width:218pt" width="291" />
+			<col style="mso-width-source:userset;mso-width-alt:3876;width:80pt" width="106" />
+		</colgroup>
+		<tr bgcolor="#0000FF" class="auto-style5" height="20" style="height:15.0pt">
+			<td class="auto-style27" height="20" width="88">&nbsp;</td>
+			<td class="auto-style27" width="88">&nbsp;</td>
+			<td class="auto-style26" width="291"><strong>Janani Swaminathan 
+			Timesheet Week 7</strong></td>
+			<td class="auto-style27" width="106">&nbsp;</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td class="auto-style27" height="20">&nbsp;</td>
+			<td class="auto-style27">&nbsp;</td>
+			<td class="auto-style27">&nbsp;</td>
+			<td class="auto-style27">&nbsp;</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td class="auto-style27" height="20"><strong>Date</strong></td>
+			<td class="auto-style27"><strong>Time</strong></td>
+			<td class="auto-style27"><strong>Task</strong></td>
+			<td><strong>Time Spent (Hrs)</strong></td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td class="auto-style29" height="20">20-Oct-12</td>
+			<td class="auto-style29">6:00 PM</td>
+			<td class="auto-style27">Analysis of the requirement</td>
+			<td class="auto-style29">2</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td class="auto-style29" height="20">&nbsp;</td>
+			<td class="auto-style29">&nbsp;</td>
+			<td class="auto-style27">&nbsp;</td>
+			<td class="auto-style29">&nbsp;</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td class="auto-style29" height="20">21-Oct-12</td>
+			<td class="auto-style29">2:00 PM</td>
+			<td class="auto-style27">Planning documentation, Communication<br />
+			Diagram</td>
+			<td class="auto-style30">3.5</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td class="auto-style29" height="20">&nbsp;</td>
+			<td class="auto-style29">&nbsp;</td>
+			<td class="auto-style27">&nbsp;</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td class="auto-style29" height="20">22-Oct-12</td>
+			<td class="auto-style29">4:30 PM</td>
+			<td class="auto-style27">Coding applet and executing it<br />
+			HTML Coding for the web page &amp; applets</td>
+			<td class="auto-style29">4</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td class="auto-style29" height="20">&nbsp;</td>
+			<td class="auto-style29">&nbsp;</td>
+			<td class="auto-style27">&nbsp;</td>
+			<td class="auto-style30">&nbsp;</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td class="auto-style29" height="20">23-Oct-12</td>
+			<td class="auto-style29">7:00 PM</td>
+			<td class="auto-style27">Testing on different OSs</td>
+			<td class="auto-style29">2</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td class="auto-style29" height="20">&nbsp;</td>
+			<td class="auto-style30">&nbsp;</td>
+		</tr>
+		<tr height="21" style="height:15.75pt">
+			<td class="auto-style29" height="21">25-Oct-12</td>
+			<td class="auto-style29">11:00 AM</td>
+			<td class="auto-style27">Uploading 
+			files on the<br />
+			server</td>
+			<td class="auto-style29">1</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td class="auto-style27" height="20">&nbsp;</td>
+			<td class="auto-style27">&nbsp;</td>
+			<td class="auto-style27">&nbsp;</td>
+			<td class="auto-style30">&nbsp;</td>
+		</tr>
+		<tr height="21" style="height:15.75pt">
+			<td class="auto-style27" height="21">&nbsp;</td>
+			<td class="auto-style27">&nbsp;</td>
+			<td class="auto-style27"><strong>Total Time Spent</strong></td>
+			<td class="auto-style29">12.5</td>
+		</tr>
+	</table>
+	
+<p class="auto-style12"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<h2 class="auto-style1"><o:p>&nbsp;Reference</o:p></h2>
+<ul>
+	<li>
+	<p class="auto-style5"><a href="http://condor.depaul.edu/xjia/">
+	http://condor.depaul.edu/xjia/</a></p>
+	</li>
+	<li>
+	<p class="auto-style5">
+	<o:p><a href="http://en.wikipedia.org/wiki/Sorting_algorithm">
+	http://en.wikipedia.org/wiki/Sorting_algorithm</a></o:p></p>
+	</li>
+	<li>
+	<p class="auto-style5"><a href="http://www.refactoring.com/">
+	http://www.refactoring.com/</a></p>
+	</li>
+	<li>
+	<p class="auto-style5">
+	<a href="http://en.wikipedia.org/wiki/Insertion_sort">
+	http://en.wikipedia.org/wiki/Insertion_sort</a></p>
+	</li>
+	<li>
+	<p class="auto-style5">
+	<a href="http://en.wikipedia.org/wiki/Selection_sort">
+	http://en.wikipedia.org/wiki/Selection_sort</a></p>
+	</li>
+</ul>
+<p class="auto-style5">
+<o:p></o:p></p>
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal">
+<o:p></o:p></p>
+<p class="auto-style5">&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+</body>
+
+</html>

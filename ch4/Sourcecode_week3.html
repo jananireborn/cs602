@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Source Code</title>
+<style type="text/css">
+.auto-style1 {
+	text-align: center;
+}
+.auto-style2 {
+	text-align: left;
+}
+</style>
+</head>
+
+<body style="background-color: #C0C0C0">
+
+<p class="auto-style1"><strong>Source Code</strong></p>
+<p class="auto-style1"><strong>Factorial</strong></p>
+<p class="auto-style2">import java.io.BufferedReader;<br />
+import java.io.IOException;<br />
+import java.io.InputStreamReader;<br />
+<br />
+<br />
+<br />
+public class factorial{<br />
+<br />
+<br />
+<br />
+<br />
+public static void main(String args[]) throws NumberFormatException, IOException 
+{<br />
+<br />
+System.out.println("Enter the number: ");<br />
+<br />
+<br />
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));<br />
+<br />
+try { <br />
+int a = Integer.parseInt(br.readLine());<br />
+int fact1= fact(a);<br />
+<br />
+System.out.println("Factorial of the number is: " +fact1);<br />
+}<br />
+catch (NumberFormatException e) {<br />
+System.out.println("Enter Numeric value");<br />
+} <br />
+<br />
+<br />
+}<br />
+<br />
+<br />
+static int fact(int fact) <br />
+{ <br />
+int parseInt;<br />
+parseInt= fact;<br />
+fact = 1;<br />
+<br />
+if ( parseInt == 0 )<br />
+{<br />
+return fact = 1;<br />
+}<br />
+else<br />
+{<br />
+<br />
+<br />
+// return fact * fact(parseInt - 1);<br />
+while ( parseInt != 0 )<br />
+{<br />
+fact = fact * parseInt;<br />
+parseInt--;<br />
+<br />
+}<br />
+return fact;<br />
+<br />
+}<br />
+<br />
+}}</p>
+<p class="auto-style2">&nbsp;</p>
+<p class="auto-style1"><strong>Average</strong></p>
+<p class="auto-style2"><br />
+import java.applet.Applet;<br />
+import java.awt.*;<br />
+import java.awt.event.*;<br />
+import javax.swing.*;<br />
+import java.io.*;<br />
+<br />
+public class FileAverage extends JApplet implements ActionListener {<br />
+<br />
+// TODO Auto-generated method stub<br />
+String line = null;<br />
+FileAverage e;<br />
+JLabel label1, label2;<br />
+JTextField text1;<br />
+JTextArea text2;<br />
+JButton button;<br />
+String msg;<br />
+<br />
+public void init() {<br />
+e = this;<br />
+Pane p = new Pane();<br />
+getContentPane().add(p);<br />
+<br />
+button.addActionListener(this);<br />
+}<br />
+<br />
+class Pane extends JPanel {<br />
+public Pane() {<br />
+<br />
+setBorder(BorderFactory.createEmptyBorder(200, 80, 200, 80));<br />
+setMaximumSize(new Dimension(10, 10));// set maximum size<br />
+<br />
+<br />
+<br />
+text1 = new JTextField(5);<br />
+text2 = new JTextArea(10,10);<br />
+text2.setEditable(false);<br />
+button = new JButton("Calculate Average");<br />
+label1 = new JLabel("Enter File name");<br />
+label2 = new JLabel("Factorial ");<br />
+label2.setVisible(false);<br />
+setLayout(new GridLayout(1, 1, 10, 5)); <br />
+add(label1);<br />
+add(text1);<br />
+setLayout(new GridLayout(2, 1, 10, 5));<br />
+add(button);<br />
+setLayout(new GridLayout(3, 1, 10, 10));<br />
+add(label2);<br />
+add(text2);<br />
+<br />
+<br />
+<br />
+}<br />
+}<br />
+<br />
+public void actionPerformed(ActionEvent ae) {<br />
+String strID = ae.getActionCommand();<br />
+text2.setText("");<br />
+String Filename = text1.getText();<br />
+<br />
+try {<br />
+BufferedReader br1 = new BufferedReader(new FileReader(Filename));<br />
+<br />
+try {<br />
+<br />
+int total = 0;<br />
+int value;<br />
+int TotalNeg = 0;<br />
+int TotVal = 0;<br />
+<br />
+while ((line = br1.readLine()) != null) {<br />
+try {<br />
+<br />
+value = Integer.parseInt(line);<br />
+<br />
+if (value &lt; 9) {<br />
+<br />
+TotVal = TotVal + value;<br />
+<br />
+total++;<br />
+}<br />
+<br />
+else {<br />
+TotalNeg++;<br />
+}<br />
+<br />
+}<br />
+<br />
+catch (Exception m) {<br />
+System.out.println(m);<br />
+text2.append ("Invalid Value in the File " + "'" + line + "'\n");<br />
+}<br />
+<br />
+}<br />
+float Average = TotVal / total;<br />
+String a = Float.toString(Average);<br />
+text2.append("Average is " + a + "\n");<br />
+<br />
+br1.close();<br />
+// System.out.println( "Average is " + Average );<br />
+<br />
+// System.out.println( "No. of Records Processed " + total );<br />
+// System.out.println( "No. of Records Neglected " + TotalNeg );<br />
+} catch (NumberFormatException e) {<br />
+System.out.println("Value" + line + " is not a valid input\n");<br />
+}<br />
+} catch (Exception f) {<br />
+text2.append("Invalid File path / name \n");<br />
+<br />
+System.out.println(f);<br />
+}<br />
+<br />
+}<br />
+// }<br />
+// }<br />
+// }<br />
+<br />
+}<br />
+</p>
+<p class="auto-style2">&nbsp;</p>
+<p class="auto-style1"><strong>Email Genrator</strong></p>
+<p class="auto-style2"><br />
+<br />
+<br />
+import java.awt.*;<br />
+import java.awt.event.*;<br />
+import javax.swing.*;<br />
+import java.io.*;<br />
+<br />
+public class EmailGenerator extends JApplet implements ActionListener {<br />
+<br />
+String line = null;<br />
+EmailGenerator e;<br />
+JLabel label1, label2;<br />
+JTextField text1;<br />
+JTextArea text2;<br />
+JButton button;<br />
+String msg;<br />
+<br />
+public void init() {<br />
+e = this;<br />
+Pane p = new Pane();<br />
+getContentPane().add(p);<br />
+<br />
+button.addActionListener(this);<br />
+}<br />
+<br />
+class Pane extends JPanel {<br />
+public Pane() {<br />
+<br />
+setBorder(BorderFactory.createEmptyBorder(200, 80, 200, 80));<br />
+setMaximumSize(new Dimension(5, 5));// set maximum size<br />
+<br />
+text1 = new JTextField(5);<br />
+text2 = new JTextArea(10, 10);<br />
+text2.setEditable(false);<br />
+button = new JButton("Generate Email File");<br />
+label1 = new JLabel("Enter Folder name");<br />
+label2 = new JLabel("Factorial ");<br />
+label2.setVisible(false);<br />
+setLayout(new GridLayout(1, 1, 1, 2));<br />
+add(label1);<br />
+add(text1);<br />
+setLayout(new GridLayout(2, 1, 1, 2));<br />
+add(button);<br />
+setLayout(new GridLayout(3, 1, 1, 2));<br />
+add(label2);<br />
+add(text2);<br />
+}<br />
+}<br />
+<br />
+public void actionPerformed(ActionEvent ae) {<br />
+<br />
+String fname, lname, ssn, email;<br />
+text2.setText("");<br />
+String Filename = (text1.getText() + "students.txt");<br />
+<br />
+try {<br />
+<br />
+BufferedReader br1 = new BufferedReader(new FileReader(Filename));<br />
+FileWriter fout = new FileWriter(text1.getText()<br />
++ "studentemail.txt");<br />
+BufferedWriter bw = new BufferedWriter(fout);<br />
+try {<br />
+// BufferedWriter bw;<br />
+String args[];<br />
+String Delimiter = ":";<br />
+<br />
+while ((line = br1.readLine()) != null) {<br />
+<br />
+args = line.split(Delimiter);<br />
+fname = args[0].substring(0, 1);<br />
+fname = fname.toLowerCase();<br />
+<br />
+lname = args[1].substring(0, 1);<br />
+lname = lname.toLowerCase();<br />
+<br />
+ssn = args[2].substring(5, 9);<br />
+<br />
+email = fname + lname + ssn + "@" + "se.depaul.edu";<br />
+<br />
+bw.write(email + "\r\n");<br />
+<br />
+}<br />
+text2.append("Source file: " + Filename + "\n");<br />
+text2.append("Destination File: " + text1.getText()<br />
++ " studentemail.txt");<br />
+bw.close();<br />
+br1.close();<br />
+<br />
+} catch (NumberFormatException e) {<br />
+System.out.println("Value" + line + " is not a valid input\n");<br />
+}<br />
+} catch (Exception f) {<br />
+text2.append("Invalid File path / name \n");<br />
+<br />
+System.out.println(f);<br />
+}<br />
+<br />
+}<br />
+// }<br />
+// }<br />
+// }<br />
+<br />
+}<br />
+<br />
+<br />
+<strong><br />
+<br />
+<br />
+</strong></p>
+
+</body>
+
+</html>

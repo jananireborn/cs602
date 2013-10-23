@@ -1,0 +1,1977 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+<style type="text/css">
+.style1 {
+	color: #800000;
+	text-align: center;
+}
+.style2 {
+	color: #800000;
+	text-align: left;
+}
+</style>
+</head>
+
+<body style="background-image: url('light-wood-texture.jpg')">
+
+<h2 class="style1">AccountView1.java</h2>
+<p class="style1">&nbsp;</p>
+<p class="MsoNormal"><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">import</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.Container;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">import</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.event.MouseEvent;</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">import</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+javax.swing.*;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F7F5F">/*</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F7F5F"><span style="mso-spacerun:yes">&nbsp;</span>* 
+To change this template, choose Tools | Templates</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F7F5F"><span style="mso-spacerun:yes">&nbsp;</span>* 
+and open the template in the editor.</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F7F5F"><span style="mso-spacerun:yes">&nbsp;</span>*/</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF">/**</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*
+</span><b><span style="font-size:10.0pt;
+font-family:Consolas;color:#7F9FBF">@author</span></b><span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"> js595</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;</span>*/</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">public</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+class</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+<u>AccountView1</u> </span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">extends</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JFrame {</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#3F5FBF">
+/**</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>* Creates new form AccountView1</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>*/</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">public</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+AccountView1(Container rootPane) {</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span><span style="mso-tab-count:1">&nbsp;&nbsp; </span></span>
+<span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span><span style="mso-tab-count:1">&nbsp;&nbsp; </span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">this</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">.</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">rootPane</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+=<span style="mso-spacerun:yes">&nbsp; </span>rootPane;</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>initComponents();<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>
+<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span></span>
+<span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#3F5FBF">
+/**</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>* This method is called from within the constructor to initialize the 
+form.</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>* WARNING: Do NOT modify this code. The content of this method is always</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>* regenerated by the Form Editor.</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>*/</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#646464">
+@SuppressWarnings</span><span style="font-size:10.0pt;font-family:Consolas;color:black">(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;unchecked&quot;</span><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">
+// &lt;editor-fold <u>defaultstate</u>=&quot;collapsed&quot; <u>desc</u>=&quot;Generated Code&quot;&gt;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+initComponents() {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jPanel1</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> =
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JPanel();</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel1</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> =
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JLabel();</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel2</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> =
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JLabel();</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel3</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> =
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JLabel();</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jPanel2</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> =
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JPanel();</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel4</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> =
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JLabel();</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jButton1</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JButton();</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel5</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> =
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JLabel();</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jButton2</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JButton();</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel6</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> =
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JLabel();</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jButton3</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JButton();</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel7</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> =
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JLabel();</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jComboBox1</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JComboBox();</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jFormattedTextField2</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JFormattedTextField();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jFormattedTextField3</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JFormattedTextField();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jFormattedTextField4</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+= </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JFormattedTextField();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel9</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> =
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JLabel();</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;</span>setDefaultCloseOperation( WindowConstants.</span><i><span style="font-size:10.0pt;font-family:Consolas;
+color:#0000C0">EXIT_ON_CLOSE</span></i><span style="font-size:10.0pt;
+font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">
+//setEnabled(false);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jPanel1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setBackground(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.Color(255, 204, 51));</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jPanel1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setBorder( 
+BorderFactory.<i>createLineBorder</i>(</span><b><span style="font-size:10.0pt;
+font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;
+font-family:Consolas;color:black"> java.awt.Color(0, 0, 0)));</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setFont(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.Font(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;Tahoma&quot;</span><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+1, 11)); </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">// NOI18N</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setForeground(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.Color(51, 51, 255));</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setText(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;Transaction&quot;</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setCursor(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.Cursor(java.awt.Cursor.</span><i><span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">HAND_CURSOR</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">));</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setFont(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.Font(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;Tahoma&quot;</span><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+1, 11)); </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">// NOI18N</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setForeground(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.Color(51, 51, 255));</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setText(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;Update 
+/ View profile&quot;</span><span style="font-size:10.0pt;font-family:Consolas;
+color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setCursor(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.Cursor(java.awt.Cursor.</span><i><span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">HAND_CURSOR</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">));</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addMouseListener(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.event.MouseAdapter() {</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#7F0055">public</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+mouseClicked(java.awt.event.MouseEvent evt) {</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>jPanel1MouseClicked(evt);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>});</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel3</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setFont(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.Font(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;Tahoma&quot;</span><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+1, 11)); </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">// NOI18N</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel3</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setForeground(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.Color(51, 51, 255));</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel3</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setText(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;Transaction 
+History&quot;</span><span style="font-size:10.0pt;font-family:Consolas;
+color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel3</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setCursor(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.Cursor(java.awt.Cursor.</span><i><span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">HAND_CURSOR</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">));</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel3</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addMouseListener(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.event.MouseAdapter() {</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#7F0055">public</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+mouseClicked(java.awt.event.MouseEvent evt) {</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>jPanel2MouseClicked(evt);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>});</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>GroupLayout jPanel1Layout = </span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout(</span><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">jPanel1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jPanel1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setLayout(jPanel1Layout);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>jPanel1Layout.setHorizontalGroup(</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>jPanel1Layout.createParallelGroup( GroupLayout.Alignment.</span><i><span style="font-size:10.0pt;font-family:Consolas;
+color:#0000C0">LEADING</span></i><span style="font-size:10.0pt;font-family:
+Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(jPanel1Layout.createSequentialGroup()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addContainerGap()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(jPanel1Layout.createParallelGroup( GroupLayout.Alignment.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">LEADING</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jLabel1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">DEFAULT_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">DEFAULT_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+Short.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">MAX_VALUE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jLabel2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">DEFAULT_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+120, Short.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">MAX_VALUE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">))</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addContainerGap())</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(jPanel1Layout.createParallelGroup( GroupLayout.Alignment.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">LEADING</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(jPanel1Layout.createSequentialGroup()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addContainerGap()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jLabel3</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">DEFAULT_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+120, Short.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">MAX_VALUE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addContainerGap()))</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>jPanel1Layout.setVerticalGroup(</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>jPanel1Layout.createParallelGroup( GroupLayout.Alignment.</span><i><span style="font-size:10.0pt;font-family:Consolas;
+color:#0000C0">LEADING</span></i><span style="font-size:10.0pt;font-family:
+Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(jPanel1Layout.createSequentialGroup()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGap(37, 37, 37)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jLabel1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+27,<span style="mso-spacerun:yes">&nbsp; </span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGap(79, 79, 79)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jLabel2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+27,<span style="mso-spacerun:yes">&nbsp; </span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addContainerGap( GroupLayout.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">DEFAULT_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+Short.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">MAX_VALUE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">))</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(jPanel1Layout.createParallelGroup( GroupLayout.Alignment.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">LEADING</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(jPanel1Layout.createSequentialGroup()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGap(92, 92, 92)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jLabel3</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+27,<span style="mso-spacerun:yes">&nbsp; </span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addContainerGap(366, Short.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">MAX_VALUE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)))</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jPanel2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setBackground(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.Color(255, 204, 51));</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jPanel2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setBorder( 
+BorderFactory.<i>createLineBorder</i>(</span><b><span style="font-size:10.0pt;
+font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;
+font-family:Consolas;color:black"> java.awt.Color(0, 0, 0)));</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jPanel2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setEnabled(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">false</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel4</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setText(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;Withdraw 
+Amount&quot;</span><span style="font-size:10.0pt;font-family:Consolas;
+color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jButton1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setFont(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.Font(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;Tahoma&quot;</span><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+1, 11)); </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">// NOI18N</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jButton1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setForeground(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.Color(51, 51, 255));</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jButton1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setText(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;Withdraw 
+Amount&quot;</span><span style="font-size:10.0pt;font-family:Consolas;
+color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jButton1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setBorder(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>javax.swing.border.SoftBevelBorder( javax.swing.border.BevelBorder.</span><i><span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">RAISED</span></i><span style="font-size:
+10.0pt;font-family:Consolas;color:black">));</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jButton1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addActionListener(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.event.ActionListener() {</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#7F0055">public</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+actionPerformed(java.awt.event.ActionEvent evt) {</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>jButton1ActionPerformed(evt);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>});</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel5</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setText(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;Deposit 
+Amount&quot;</span><span style="font-size:10.0pt;font-family:Consolas;
+color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jButton2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setFont(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.Font(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;Tahoma&quot;</span><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+1, 11)); </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">// NOI18N</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jButton2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setForeground(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.Color(51, 51, 255));</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jButton2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setText(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;Deposit 
+Amount&quot;</span><span style="font-size:10.0pt;font-family:Consolas;
+color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jButton2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setBorder(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>javax.swing.border.SoftBevelBorder( javax.swing.border.BevelBorder.</span><i><span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">RAISED</span></i><span style="font-size:
+10.0pt;font-family:Consolas;color:black">));</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jButton2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addActionListener(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.event.ActionListener() {</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#7F0055">public</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+actionPerformed(java.awt.event.ActionEvent evt) {</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>jButton2ActionPerformed(evt);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>});</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel6</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setText(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;Transfer 
+Amount&quot;</span><span style="font-size:10.0pt;font-family:Consolas;
+color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jButton3</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setFont(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.Font(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;Tahoma&quot;</span><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+1, 11)); </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">// NOI18N</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jButton3</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setForeground(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.Color(51, 51, 255));</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jButton3</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setText(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;Tranfer 
+Amount&quot;</span><span style="font-size:10.0pt;font-family:Consolas;
+color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jButton3</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setBorder(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>javax.swing.border.SoftBevelBorder( javax.swing.border.BevelBorder.</span><i><span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">RAISED</span></i><span style="font-size:
+10.0pt;font-family:Consolas;color:black">));</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jButton3</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addActionListener(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.event.ActionListener() {</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#7F0055">public</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+actionPerformed(java.awt.event.ActionEvent evt) {</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>jButton3ActionPerformed(evt);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>});</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel7</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setText(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;Select 
+Account&quot;</span><span style="font-size:10.0pt;font-family:Consolas;
+color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jComboBox1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setModel(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>DefaultComboBoxModel(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+String[] { </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;Item 1&quot;</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;Item 
+2&quot;</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;Item 
+3&quot;</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,
+</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;Item 
+4&quot;</span><span style="font-size:10.0pt;font-family:Consolas;color:black"> }));</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jFormattedTextField2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addActionListener(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.event.ActionListener() {</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#7F0055">public</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+actionPerformed(java.awt.event.ActionEvent evt) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>jFormattedTextField2ActionPerformed(evt);</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>});</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jFormattedTextField3</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addActionListener(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.event.ActionListener() {</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#7F0055">public</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+actionPerformed(java.awt.event.ActionEvent evt) {</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>jFormattedTextField3ActionPerformed(evt);</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>});</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jFormattedTextField4</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.addActionListener(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.event.ActionListener() {</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#7F0055">public</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+actionPerformed(java.awt.event.ActionEvent evt) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>jFormattedTextField4ActionPerformed(evt);</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>});</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel9</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setFont(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.Font(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;Tahoma&quot;</span><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+1, 13)); </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">// NOI18N</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel9</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setForeground(</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+java.awt.Color(51, 102, 255));</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jLabel9</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setText(</span><span style="font-size:10.0pt;font-family:Consolas;color:#2A00FF">&quot;Transaction 
+page&quot;</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>GroupLayout jPanel2Layout = </span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout(</span><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">jPanel2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jPanel2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setLayout(jPanel2Layout);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>jPanel2Layout.setHorizontalGroup(</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>jPanel2Layout.createParallelGroup( GroupLayout.Alignment.</span><i><span style="font-size:10.0pt;font-family:Consolas;
+color:#0000C0">LEADING</span></i><span style="font-size:10.0pt;font-family:
+Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(jPanel2Layout.createSequentialGroup()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(jPanel2Layout.createParallelGroup( GroupLayout.Alignment.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">LEADING</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(jPanel2Layout.createSequentialGroup()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGap(27, 27, 27)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(jPanel2Layout.createParallelGroup( GroupLayout.Alignment.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">LEADING</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">,
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+false</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(jPanel2Layout.createSequentialGroup()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jLabel7</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+97,<span style="mso-spacerun:yes">&nbsp; </span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addPreferredGap( LayoutStyle.ComponentPlacement.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">RELATED</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jComboBox1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+0,<span style="mso-spacerun:yes">&nbsp; </span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">DEFAULT_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+Short.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">MAX_VALUE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">))</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(jPanel2Layout.createSequentialGroup()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jLabel6</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+97,<span style="mso-spacerun:yes">&nbsp; </span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addPreferredGap( LayoutStyle.ComponentPlacement.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">RELATED</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jFormattedTextField4</span><span style="font-size:10.0pt;font-family:Consolas;color:black">))</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(jPanel2Layout.createSequentialGroup()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jLabel4</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+97,<span style="mso-spacerun:yes">&nbsp; </span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addPreferredGap( LayoutStyle.ComponentPlacement.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">RELATED</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jFormattedTextField2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+121,<span style="mso-spacerun:yes">&nbsp; </span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">))</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(jPanel2Layout.createSequentialGroup()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jLabel5</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+97,<span style="mso-spacerun:yes">&nbsp; </span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addPreferredGap( LayoutStyle.ComponentPlacement.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">RELATED</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jFormattedTextField3</span><span style="font-size:10.0pt;font-family:Consolas;color:black">))</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jButton1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">DEFAULT_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">DEFAULT_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+Short.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">MAX_VALUE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jButton2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">DEFAULT_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">DEFAULT_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+Short.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">MAX_VALUE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jButton3</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+222,<span style="mso-spacerun:yes">&nbsp; </span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)))</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(jPanel2Layout.createSequentialGroup()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addContainerGap()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jLabel9</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+218,<span style="mso-spacerun:yes">&nbsp; </span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)))</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addContainerGap(387, Short.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">MAX_VALUE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">))</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>jPanel2Layout.setVerticalGroup(</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>jPanel2Layout.createParallelGroup( GroupLayout.Alignment.</span><i><span style="font-size:10.0pt;font-family:Consolas;
+color:#0000C0">LEADING</span></i><span style="font-size:10.0pt;font-family:
+Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(jPanel2Layout.createSequentialGroup()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addContainerGap()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jLabel9</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+24,<span style="mso-spacerun:yes">&nbsp; </span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGap(19, 19, 19)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(jPanel2Layout.createParallelGroup( GroupLayout.Alignment.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">BASELINE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jLabel4</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+23,<span style="mso-spacerun:yes">&nbsp; </span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jFormattedTextField2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">DEFAULT_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">))</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addPreferredGap( LayoutStyle.ComponentPlacement.</span><i><span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">RELATED</span></i><span style="font-size:
+10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jButton1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGap(27, 27, 27)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(jPanel2Layout.createParallelGroup( GroupLayout.Alignment.</span><i><span style="font-size:10.0pt;font-family:Consolas;
+color:#0000C0">BASELINE</span></i><span style="font-size:10.0pt;font-family:
+Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jLabel5</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+23,<span style="mso-spacerun:yes">&nbsp; </span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jFormattedTextField3</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">DEFAULT_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">))</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addPreferredGap( LayoutStyle.ComponentPlacement.</span><i><span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">RELATED</span></i><span style="font-size:
+10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jButton2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGap(27, 27, 27)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(jPanel2Layout.createParallelGroup( GroupLayout.Alignment.</span><i><span style="font-size:10.0pt;font-family:Consolas;
+color:#0000C0">BASELINE</span></i><span style="font-size:10.0pt;font-family:
+Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jLabel6</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+23,<span style="mso-spacerun:yes">&nbsp; </span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jFormattedTextField4</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">DEFAULT_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">))</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGap(4, 4, 4)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(jPanel2Layout.createParallelGroup( GroupLayout.Alignment.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">BASELINE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jLabel7</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+23,<span style="mso-spacerun:yes">&nbsp; </span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jComboBox1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">DEFAULT_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">))</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addPreferredGap( LayoutStyle.ComponentPlacement.</span><i><span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">UNRELATED</span></i><span style="font-size:
+10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jButton3</span><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addContainerGap(195, Short.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">MAX_VALUE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">))</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>GroupLayout layout = </span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout(</span><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">rootPane</span><span style="font-size:10.0pt;font-family:Consolas;color:black">);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+rootPane</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.setLayout(layout);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>layout.setHorizontalGroup(</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>layout.createParallelGroup( GroupLayout.Alignment.</span><i><span style="font-size:10.0pt;font-family:Consolas;
+color:#0000C0">LEADING</span></i><span style="font-size:10.0pt;font-family:
+Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(layout.createSequentialGroup()</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGap(18, 18, 18)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jPanel1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">DEFAULT_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addPreferredGap( LayoutStyle.ComponentPlacement.</span><i><span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">RELATED</span></i><span style="font-size:
+10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jPanel2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">DEFAULT_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">PREFERRED_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addContainerGap(503, Short.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">MAX_VALUE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">))</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>layout.setVerticalGroup(</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>layout.createParallelGroup( GroupLayout.Alignment.</span><i><span style="font-size:10.0pt;font-family:Consolas;
+color:#0000C0">LEADING</span></i><span style="font-size:10.0pt;font-family:
+Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(layout.createSequentialGroup()</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addContainerGap()</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addGroup(layout.createParallelGroup( GroupLayout.Alignment.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">LEADING</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">,
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">
+false</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jPanel1</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">DEFAULT_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">DEFAULT_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+Short.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">MAX_VALUE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addComponent(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">jPanel2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">DEFAULT_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">,<span style="mso-spacerun:yes">&nbsp;
+</span>GroupLayout.</span><i><span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">DEFAULT_SIZE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">, 
+Short.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">MAX_VALUE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">))</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.addContainerGap(979, Short.</span><i><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">MAX_VALUE</span></i><span style="font-size:10.0pt;font-family:Consolas;color:black">))</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>);</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>pack();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">// 
+&lt;/editor-fold&gt;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+jPanel2MouseClicked(java.awt.event.MouseEvent evt) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">
+// </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F9FBF">
+TODO</span></b><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F"> 
+add your handling code here:</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span><span style="mso-tab-count:1">&nbsp;&nbsp; </span></span>
+<span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span><span style="mso-tab-count:1">&nbsp;&nbsp; </span></span>
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">rootPane</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.removeAll();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span><span style="mso-tab-count:1">&nbsp;&nbsp; </span></span><b><u>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></u></b><u><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+AccountView2(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">rootPane</span><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span></u><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span><span style="mso-tab-count:1">&nbsp;&nbsp; </span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">this</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">.repaint();<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+jPanel1MouseClicked(MouseEvent evt) {</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span><span style="mso-tab-count:1">&nbsp;&nbsp; </span></span>
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#0000C0">rootPane</span><span style="font-size:10.0pt;font-family:Consolas;color:black">.removeAll();</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span><span style="mso-tab-count:1">&nbsp;&nbsp; </span></span><b><u>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">new</span></u></b><u><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+AccountView3(</span><span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">rootPane</span><span style="font-size:10.0pt;font-family:Consolas;color:black">)</span></u><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span><span style="mso-tab-count:1">&nbsp;&nbsp; </span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">this</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">.repaint();<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+jButton3ActionPerformed(java.awt.event.ActionEvent evt) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">
+// </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F9FBF">
+TODO</span></b><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F"> 
+add your handling code here:</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+jButton2ActionPerformed(java.awt.event.ActionEvent evt) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">
+// </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F9FBF">
+TODO</span></b><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F"> 
+add your handling code here:</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+jButton1ActionPerformed(java.awt.event.ActionEvent evt) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">
+// </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F9FBF">
+TODO</span></b><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F"> 
+add your handling code here:</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+jFormattedTextField2ActionPerformed(java.awt.event.ActionEvent evt) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;</span></span><span style="font-size:
+10.0pt;font-family:Consolas;color:#3F7F5F">// </span><b>
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#7F9FBF">TODO</span></b><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F"> 
+add your handling code here:</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+jFormattedTextField3ActionPerformed(java.awt.event.ActionEvent evt) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">
+// </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F9FBF">
+TODO</span></b><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F"> 
+add your handling code here:</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black">
+</span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">void</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+jFormattedTextField4ActionPerformed(java.awt.event.ActionEvent evt) {</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">
+// </span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F9FBF">
+TODO</span></b><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F"> 
+add your handling code here:</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>}</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><span style="font-size:
+10.0pt;font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#3F5FBF">
+/**</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>* </span><b>
+<span style="font-size:10.0pt;font-family:Consolas;
+color:#7F9FBF">@param</span></b><span style="font-size:10.0pt;font-family:Consolas;
+color:#3F5FBF"> args the command line arguments</span><span style="font-size:
+10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:#3F5FBF"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>*/</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p>
+</span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">
+// Variables declaration - do not modify</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JButton </span>
+<span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">jButton1</span><span style="font-size:10.0pt;
+font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JButton </span>
+<span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">jButton2</span><span style="font-size:10.0pt;
+font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JButton </span>
+<span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">jButton3</span><span style="font-size:10.0pt;
+font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JComboBox </span>
+<span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">jComboBox1</span><span style="font-size:
+10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JFormattedTextField </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jFormattedTextField2</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JFormattedTextField </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jFormattedTextField3</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JFormattedTextField </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">
+jFormattedTextField4</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JLabel </span>
+<span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">jLabel1</span><span style="font-size:10.0pt;
+font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JLabel </span>
+<span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">jLabel2</span><span style="font-size:10.0pt;
+font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JLabel </span>
+<span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">jLabel3</span><span style="font-size:10.0pt;
+font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JLabel </span>
+<span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">jLabel4</span><span style="font-size:10.0pt;
+font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JLabel </span>
+<span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">jLabel5</span><span style="font-size:10.0pt;
+font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JLabel </span>
+<span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">jLabel6</span><span style="font-size:10.0pt;
+font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JLabel </span>
+<span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">jLabel7</span><span style="font-size:10.0pt;
+font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JLabel </span>
+<span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">jLabel9</span><span style="font-size:10.0pt;
+font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp; 
+&nbsp;&nbsp;</span></span><b><span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JPanel </span>
+<span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">jPanel1</span><span style="font-size:10.0pt;
+font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;
+</span>JPanel </span>
+<span style="font-size:10.0pt;
+font-family:Consolas;color:#0000C0">jPanel2</span><span style="font-size:10.0pt;
+font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><b>
+<span style="font-size:10.0pt;font-family:Consolas;color:#7F0055">private</span></b><span style="font-size:10.0pt;font-family:Consolas;color:black"> 
+Container </span>
+<span style="font-size:10.0pt;font-family:Consolas;color:#0000C0">rootPane</span><span style="font-size:10.0pt;font-family:Consolas;color:black">;</span><span style="font-size:10.0pt;font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:10.0pt;font-family:Consolas;color:#3F7F5F">
+// End of variables declaration</span><span style="font-size:10.0pt;font-family:
+Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal">
+<span style="font-size:
+10.0pt;font-family:Consolas;color:black">}</span><span style="font-size:10.0pt;
+font-family:Consolas"><o:p></o:p></span></p>
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class="style2">&nbsp;</p>
+
+</body>
+
+</html>
